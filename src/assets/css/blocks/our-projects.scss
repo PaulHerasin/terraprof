@@ -17,7 +17,6 @@
 
 		@media screen and (max-width: $large_tablet) {
 			flex-direction: column;
-			padding-right: 3rem;
 			position: relative;
 		}
 	}
@@ -26,10 +25,7 @@
 		margin-top: 12rem;
 
 		@media screen and (max-width: $large_tablet) {
-			margin-top: 0;
-			position: absolute;
-			top: 5rem;
-			right: 0;
+			display: none;
 		}
 	}
 
@@ -57,7 +53,7 @@
 		width: 100%;
 		position: relative;
 
-		> div {
+		>div {
 			position: relative;
 
 			img {
@@ -95,8 +91,7 @@
 		overflow: hidden;
 		cursor: pointer;
 
-		@media screen and (max-width: $large_tablet) {
-		}
+		@media screen and (max-width: $large_tablet) {}
 
 		&:hover {
 			.our-projects__object {
@@ -128,7 +123,7 @@
 			}
 
 			.our-projects__img {
-				> div {
+				>div {
 					padding-bottom: 100.96%;
 				}
 			}
@@ -138,7 +133,7 @@
 			max-width: 56rem;
 
 			.our-projects__img {
-				> div {
+				>div {
 					padding-bottom: 114.28%;
 
 					@media screen and (max-width: $large_tablet) {
@@ -158,7 +153,7 @@
 			}
 
 			.our-projects__img {
-				> div {
+				>div {
 					padding-bottom: 89.43%;
 
 					@media screen and (max-width: $large_tablet) {
@@ -172,7 +167,7 @@
 			max-width: 63rem;
 
 			.our-projects__img {
-				> div {
+				>div {
 					padding-bottom: 74.6%;
 				}
 			}
@@ -186,7 +181,7 @@
 			}
 
 			.our-projects__img {
-				> div {
+				>div {
 					padding-bottom: 120.9%;
 
 					@media screen and (max-width: $large_tablet) {
@@ -200,7 +195,7 @@
 			max-width: 68rem;
 
 			.our-projects__img {
-				> div {
+				>div {
 					padding-bottom: 66.47%;
 				}
 			}
@@ -210,7 +205,7 @@
 			max-width: 100%;
 
 			.our-projects__img {
-				> div {
+				>div {
 					padding-bottom: 65.96%;
 				}
 			}
