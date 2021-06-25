@@ -9,7 +9,7 @@
         padding-right: 1rem;
         border: none;
         background-color: inherit;
-        line-height: 5rem;
+        line-height: 4.5rem;
         -webkit-appearance: none;
         -moz-appearance: textfield;
         font-size: 1.8rem;
@@ -44,7 +44,7 @@
                     resize: none;
                     border-bottom: 1.5px solid #C4C4C4;
                     line-height: 1.5;
-                    min-height: 18rem;
+                    min-height: 17rem;
                     transition: all .5s;
 
                     @media screen and (max-width:$large_tablet) {
