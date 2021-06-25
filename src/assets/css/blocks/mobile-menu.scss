@@ -28,12 +28,13 @@
 	&__top {
 		display: flex;
 		justify-content: space-between;
-		padding-left: 15px;
-		padding-top: 20px;
+		align-items: center;
+		padding-left: 1.5rem;
+		padding-top: 1.5rem;
 	}
 
 	&__logo {
-		max-width: 200px;
+		max-width: 16rem;
 	}
 
 	&__wrap {
@@ -60,23 +61,23 @@
 		font-family: $secondary-f;
 		margin-top: auto;
 		text-align: center;
-		padding: 10px 0;
+		padding: 1rem 0;
 		font-weight: 500;
-		font-size: 20px;
+		font-size: 2rem;
 	}
 
 	&__act {
-		height: 50px;
+		height: 4rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 50px;
+		width: 4rem;
 	}
 
 	&__nav {
 		position: relative;
-		padding: 0 15px;
-		padding-top: 10px;
+		padding: 0 1.5rem;
+		padding-top: 1rem;
 
 		&-list {
 			display: flex;
@@ -85,7 +86,7 @@
 		}
 
 		&-item {
-			margin-bottom: 15px;
+			margin-bottom: 2rem;
 
 			&:last-child {
 				margin-bottom: 0;
@@ -102,7 +103,7 @@
 			line-height: 1.1875;
 			text-transform: uppercase;
 			font-family: $secondary-f;
-			font-size: 16px;
+			font-size: 2rem;
 		}
 	}
 }
