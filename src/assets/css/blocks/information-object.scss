@@ -6,13 +6,6 @@
         padding-bottom: 6rem;
     }
 
-    .wrap {
-        @media screen and (max-width:$large_tablet) {
-            padding-right: 30px;
-            position: relative;
-        }
-    }
-
     &__scroll {
         position: absolute;
         left: 50%;
@@ -20,10 +13,7 @@
         transform: translate(-50%, -50%);
 
         @media screen and (max-width:$large_tablet) {
-            transform: translate(0);
-            top: 20%;
-            right: 0;
-            left: initial;
+            display: none;
         }
     }
 
