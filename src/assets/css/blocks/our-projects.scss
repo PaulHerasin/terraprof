@@ -1,7 +1,10 @@
 .our-projects {
 	padding-top: 15.5rem;
 	padding-bottom: 12rem;
-	padding: 6rem 0;
+
+	@media screen and (max-width:$large_tablet) {
+		padding: 6rem 0;
+	}
 
 	&__title {
 		margin-bottom: 8.5rem;
@@ -42,6 +45,8 @@
 		max-width: 64rem;
 		width: 100%;
 		padding-top: 9rem;
+		display: flex;
+		flex-direction: column;
 
 		@media screen and (max-width: $large_tablet) {
 			max-width: 100%;
@@ -212,6 +217,39 @@
 					padding-bottom: 65.96%;
 				}
 			}
+		}
+	}
+
+	&__btn {
+		padding: 0 3.2rem;
+		line-height: 5.6rem;
+		display: inline-flex;
+		align-items: center;
+		background: $danger;
+		border-radius: calc(#{$br} * 2);
+		margin-left: auto;
+		margin-right: 12.5%;
+		margin-top: 4rem;
+
+		&:hover {
+			svg {
+				transform: translateX(3px);
+			}
+		}
+
+		&-title {
+			font-family: $secondary-f;
+			font-weight: 500;
+			text-transform: uppercase;
+			color: #FFFFFF;
+		}
+
+		svg {
+			width: 3rem;
+			fill: #fff;
+			margin-left: 1.4rem;
+			transition: transform .5s;
+			will-change: transform;
 		}
 	}
 }
