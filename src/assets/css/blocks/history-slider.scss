@@ -1,0 +1,163 @@
+.history-slider {
+    position: relative;
+
+    &__item {
+        &--reverse {
+            @media screen and (max-width:$large_tablet) {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+        }
+    }
+
+    &__line {
+        height: 1px;
+        background: linear-gradient(0deg, rgba(196, 196, 196, 0.5), rgba(196, 196, 196, 0.5)), rgba(196, 196, 196, 0.5);
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @media screen and (max-width:$large_tablet) {
+            top: auto;
+            bottom: calc(9px / 2);
+            transform: translateY(0);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 100%;
+            height: inherit;
+            background-color: inherit;
+            width: 100%;
+
+            @media screen and (max-width:$large_tablet) {
+                display: none;
+            }
+        }
+    }
+
+    &__box {
+        padding-bottom: 3rem;
+        position: relative;
+
+        &-circle {
+            position: absolute;
+            top: calc(100% - 4.5px);
+            right: calc(100% - 4.5px);
+            width: 9px;
+            height: 9px;
+            background: $danger;
+            border-radius: calc(#{$br} / 2);
+
+            @media screen and (max-width:$large_tablet) {
+                // width: 5px;
+                // height: 5px;
+                top: auto;
+                bottom: 0;
+                // right: calc(100% - 2.5px);
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -4px;
+                width: calc(100% + 8px);
+                height: 100%;
+                background: linear-gradient(180deg, #F6F6F6 41.61%, #F6F6F6 41.61%, rgba(246, 246, 246, 0.97) 100%);
+                z-index: -1;
+            }
+        }
+
+        &--hidden {
+            opacity: 0;
+            visibility: hidden;
+
+            @media screen and (max-width:$large_tablet) {
+                display: none;
+            }
+        }
+
+        &--bottom {
+            padding-bottom: 0;
+            padding-top: 3rem;
+
+            @media screen and (max-width:$large_tablet) {
+                padding-top: 0;
+                padding-bottom: 3rem;
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            .history-slider__box-img {
+                margin-top: 0;
+                margin-bottom: 1rem;
+
+                @media screen and (max-width:$large_tablet) {
+                    margin-top: 1rem;
+                    margin-bottom: 0;
+                }
+            }
+
+            .history-slider__box-circle {
+                top: auto;
+                bottom: calc(100% - 4.5px);
+
+                @media screen and (max-width:$large_tablet) {
+                    bottom: 0;
+                    top: auto;
+                }
+            }
+
+            .history-slider__box-date {
+                order: 1;
+            }
+        }
+
+        &-img {
+            width: 100%;
+            border-radius: calc(#{$br * 2});
+            overflow: hidden;
+            margin-top: 1rem;
+
+            >div {
+                position: relative;
+                padding-bottom: 73.25%;
+
+                img {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &-date {
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            color: $danger;
+            margin-bottom: 1rem;
+
+            @media screen and (max-width:$large_tablet) {
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        &-title {
+            font-weight: bold;
+            font-size: 1.8rem;
+
+            @media screen and (max-width:$large_tablet) {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+mixin gallery(params)
+    section.gallery
+        if params.content == 'one-object'
+            .center-wrap
+                .gallery__content
+                    span.line
+                    .gallery__title 
+                        h2.simple-title.simple-title--thin Галерея даного обєкту
+                    .gallery__subtitle.subtitle-line Lorem ipsum dolor
+        .gallery-slider 
+            .swiper-container
+                .swiper-wrapper
+                    .swiper-slide
+                        .gallery-slider__img
+                            div
+                                figure.slide-bgimg(style="background-image:url('assets/images/png/gallery-slider-img1.png')")
+                                    img.entity-img(src='assets/images/png/gallery-slider-img1.png' alt='')
+                    .swiper-slide
+                        .gallery-slider__img
+                            div
+                                figure.slide-bgimg(style="background-image:url('assets/images/png/gallery-slider-img2.png')")
+                                img.entity-img(src='assets/images/png/gallery-slider-img2.png' alt='')
+                    .swiper-slide
+                        .gallery-slider__img
+                            div
+                                figure.slide-bgimg(style="background-image:url('assets/images/png/gallery-slider-img1.png')")
+                                img.entity-img(src='assets/images/png/gallery-slider-img1.png' alt='')
+                    .swiper-slide
+                        .gallery-slider__img
+                            div
+                                figure.slide-bgimg(style="background-image:url('assets/images/png/gallery-slider-img2.png')")
+                                    img.entity-img(src='assets/images/png/gallery-slider-img2.png' alt='')
+                    .swiper-slide
+                        .gallery-slider__img
+                            div
+                                figure.slide-bgimg(style="background-image:url('assets/images/png/gallery-slider-img1.png')")
+                                img.entity-img(src='assets/images/png/gallery-slider-img1.png' alt='')
+                    .swiper-slide
+                        .gallery-slider__img
+                            div
+                                figure.slide-bgimg(style="background-image:url('assets/images/png/gallery-slider-img2.png')")
+                                img.entity-img(src='assets/images/png/gallery-slider-img2.png' alt='')
+            .gallery-slider__bottom
+                .swiper-button
+                    //- .swiper-button__line
+                    .slider-btn--prev.slider-btn
+                        svg(viewbox='0 0 18 12' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            path(d='M6.03061 11.6804L7.06435 10.6792L2.79866 6.54815L18 6.54815L18 5.13227L2.79866 5.13227L7.06435 1.00115L6.03061 8.88819e-07L2.43189e-06 5.84021L6.03061 11.6804Z')
+                    .slider-btn--next.slider-btn
+                        svg(viewbox='0 0 18 12' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            path(d='M11.9694 0L10.9357 1.00118L15.2013 5.13227H0V6.54815H15.2013L10.9357 10.6793L11.9694 11.6804L18 5.84021L11.9694 0Z')
+                .swiper-pagination

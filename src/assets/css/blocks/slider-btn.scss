@@ -1,0 +1,29 @@
+.slider-btn {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: 1px solid rgba(196, 196, 196, 0.6);
+    transition: border-color .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    @media screen and (max-width:$large_tablet) {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    &:hover {
+        border: 1px solid #657081;
+    }
+
+    svg {
+        width: 1.8rem;
+        fill: $primary-c;
+
+        @media screen and (max-width:$large_tablet) {
+            width: 1rem;
+        }
+    }
+}

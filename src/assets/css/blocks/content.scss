@@ -1,0 +1,23 @@
+.content {
+    font-size: 1.8rem;
+    line-height: 178%;
+    text-align: left;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+
+    @media screen and (max-width:$large_tablet) {
+        font-size: 1.6rem;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    p+p {
+        margin-top: 5rem;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-top: 3rem;
+        }
+    }
+}

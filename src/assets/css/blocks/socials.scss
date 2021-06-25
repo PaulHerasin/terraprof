@@ -1,0 +1,67 @@
+.socials {
+    display: flex;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .5s;
+
+        svg {
+            fill: #fff;
+            transition: all .5s;
+            width: 2rem;
+
+            @media screen and (max-width:$large_tablet) {
+                width: 1.6rem;
+            }
+
+            .contact__info & {
+                fill: $danger;
+                width: 2.4rem;
+
+                @media screen and (max-width:$large_tablet) {
+                    width: 1.8rem;
+                }
+            }
+
+        }
+
+        &:hover {
+            svg {
+                fill: #67707C;
+
+                .contact__info & {
+                    fill: #323841;
+                }
+            }
+        }
+
+        &+.socials__link {
+            margin: 0 0 0 3.5rem;
+
+            .contact__info & {
+                margin: 0 0 0 4rem;
+            }
+
+        }
+
+        &--facebook {
+            svg {
+                width: 1.3rem;
+
+                @media screen and (max-width:$large_tablet) {
+                    width: 1rem;
+                }
+
+                .contact__info & {
+                    width: 1.5rem;
+
+                    @media screen and (max-width:$large_tablet) {
+                        width: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,210 @@
+.information-object {
+    padding-bottom: 17rem;
+    position: relative;
+
+    @media screen and (max-width:$large_tablet) {
+        padding-bottom: 6rem;
+    }
+
+    .wrap {
+        @media screen and (max-width:$large_tablet) {
+            padding-right: 30px;
+            position: relative;
+        }
+    }
+
+    &__scroll {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        @media screen and (max-width:$large_tablet) {
+            transform: translate(0);
+            top: 20%;
+            right: 0;
+            left: initial;
+        }
+    }
+
+    &__container {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        @media screen and (max-width:$large_tablet) {
+            flex-direction: column;
+        }
+
+        &--reverse {
+            flex-direction: row-reverse;
+            align-items: flex-end;
+
+            @media screen and (max-width:$large_tablet) {
+                margin-top: 4rem;
+                flex-direction: column;
+            }
+
+            .information-object__right {
+                margin-left: 0;
+                margin-right: 10rem;
+
+                @media screen and (max-width:$large_tablet) {
+                    margin-right: 0;
+                }
+            }
+
+            .information-object__img {
+                margin-left: 0;
+                max-width: 79.5rem;
+                width: 100%;
+
+                >div {
+                    padding-bottom: 83.01%;
+                }
+            }
+
+            .information-object__left {
+                max-width: 66rem;
+                width: 100%;
+            }
+
+            .information-object__left-text {
+                padding-left: 0;
+            }
+
+        }
+    }
+
+    &__title {
+        font-family: $secondary-f;
+        font-weight: 500;
+        font-size: 5.6rem;
+        margin-bottom: 3rem;
+        padding-left: 12.5rem;
+
+        @media screen and (max-width:$large_tablet) {
+            padding-left: 0;
+            font-size: 3rem;
+        }
+    }
+
+    &__left {
+        max-width: 79.5rem;
+        width: 100%;
+
+        @media screen and (max-width:$large_tablet) {
+            max-width: 100%;
+            margin-bottom: 4rem;
+        }
+
+        &-info {
+            margin-bottom: 5rem;
+            padding-left: 12.5rem;
+
+            @media screen and (max-width:$large_tablet) {
+                padding-left: 0;
+            }
+        }
+
+        &-row {
+            margin-bottom: 5rem;
+            display: flex;
+            align-items: center;
+
+            @media screen and (max-width:$large_tablet) {
+                margin-bottom: 3rem;
+                justify-content: space-between;
+            }
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+
+        &-box {
+            &:first-child {
+                max-width: 20rem;
+                width: 100%;
+                margin-right: 7rem;
+
+                @media screen and (max-width:$large_tablet) {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            color: $danger;
+            margin-bottom: 1rem;
+
+            @media screen and (max-width:$large_tablet) {
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        &-descr {
+            font-weight: 600;
+            font-size: 1.8rem;
+
+            @media screen and (max-width:$large_tablet) {
+                font-size: 1.6rem;
+            }
+        }
+
+        &-text {
+            padding-left: 12.5rem;
+
+            @media screen and (max-width:$large_tablet) {
+                padding-left: 0;
+            }
+        }
+    }
+
+    &__right {
+        max-width: calc(100% - 10rem - 79.5rem);
+        // max-width: 66rem;
+        width: 100%;
+        margin-left: 10rem;
+
+        @media screen and (max-width:$large_tablet) {
+            max-width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    &__img {
+        max-width: 51rem;
+        width: 100%;
+        margin-left: 4rem;
+        border-radius: calc(#{$br} * 4);
+        overflow: hidden;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-left: 0;
+        }
+
+        >div {
+            position: relative;
+            padding-bottom: 106.86%;
+
+            img {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

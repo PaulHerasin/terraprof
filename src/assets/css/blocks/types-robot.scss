@@ -1,0 +1,114 @@
+.types-robot {
+    background: linear-gradient(180deg, #F6F6F6 41.61%, #F6F6F6 41.61%, rgba(246, 246, 246, 0.97) 100%);
+    padding-top: 7.5rem;
+    padding-bottom: 13.5rem;
+
+    @media screen and (max-width:$large_tablet) {
+        padding: 6rem 0;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 8.5rem;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width:$large_tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__list {
+        max-width: 50rem;
+        width: 100%;
+
+        @media screen and (max-width:$large_tablet) {
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            overflow: auto;
+            margin-bottom: 2rem;
+
+            &::-webkit-scrollbar-thumb {
+                background: rgba($primary-c, .5) !important;
+                border-radius: 10rem;
+            }
+
+            &::-webkit-scrollbar {
+                height: 0.5rem;
+            }
+
+            &::-webkit-scrollbar-track {
+                border-radius: 10rem;
+                background: #F6F6F6;
+            }
+        }
+
+        &-item {
+            font-family: $secondary-f;
+            margin-bottom: 4rem;
+            font-weight: 300;
+            font-size: 4rem;
+            line-height: 140%;
+            letter-spacing: -0.04em;
+            transition: color .5s, text-shadow .5s;
+            cursor: pointer;
+
+            @media screen and (max-width:$large_tablet) {
+                margin-bottom: 0;
+                margin-right: 3rem;
+                font-size: 2rem;
+                white-space: nowrap;
+
+                &:last-child {
+                    margin-right: 0px;
+                }
+            }
+
+            &:hover {
+                color: $danger;
+                text-shadow: 0 0 1px $danger, 0 0 1px $danger;
+            }
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+
+        }
+    }
+
+    &__right {
+        width: calc(100% - 50rem - 14.5rem);
+        margin-left: 14.5rem;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+
+    &__img {
+        border-radius: calc(#{$br} * 4);
+        overflow: hidden;
+        display: block;
+
+        &:hover {
+            img {
+                transform: scale(1.08);
+            }
+        }
+
+        img {
+            transition: 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) transform;
+        }
+
+
+    }
+}

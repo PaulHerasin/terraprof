@@ -1,0 +1,55 @@
+.map {
+    position: relative;
+
+    .line {
+        width: 24.6%;
+    }
+
+    &__content {
+        position: relative;
+        text-align: center;
+        padding-top: 17.5rem;
+        padding-bottom: 14.5rem;
+
+        @media screen and (max-width:$large_tablet) {
+            padding-top: 10rem;
+            padding-bottom: 5rem;
+        }
+    }
+
+    &__body {
+        width: 100%;
+        position: relative;
+
+        >div {
+            position: relative;
+            padding-bottom: 39.27%;
+
+            iframe {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &:hover {
+            .map__bg {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity .5s, visibility .5s;
+    }
+}

@@ -1,0 +1,27 @@
+.gallery {
+    padding: 0rem 0 10rem;
+
+    @media screen and (max-width:$large_tablet) {
+        padding: 0 0 6rem;
+    }
+
+    &__content {
+        padding-top: 20rem;
+        padding-bottom: 7rem;
+        position: relative;
+
+        @media screen and (max-width:$large_tablet) {
+            padding-top: 8rem;
+            padding-bottom: 3rem;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 5rem;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-bottom: 3rem;
+        }
+    }
+}

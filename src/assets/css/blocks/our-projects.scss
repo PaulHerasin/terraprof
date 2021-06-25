@@ -1,0 +1,219 @@
+.our-projects {
+	padding-top: 15.5rem;
+	padding-bottom: 12rem;
+	padding: 6rem 0;
+
+	&__title {
+		margin-bottom: 8.5rem;
+
+		@media screen and (max-width: $large_tablet) {
+			margin-bottom: 5rem;
+		}
+	}
+
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+
+		@media screen and (max-width: $large_tablet) {
+			flex-direction: column;
+			padding-right: 3rem;
+			position: relative;
+		}
+	}
+
+	&__scroll {
+		margin-top: 12rem;
+
+		@media screen and (max-width: $large_tablet) {
+			margin-top: 0;
+			position: absolute;
+			top: 5rem;
+			right: 0;
+		}
+	}
+
+	&__left {
+		max-width: 66rem;
+		width: 100%;
+
+		@media screen and (max-width: $large_tablet) {
+			max-width: 100%;
+		}
+	}
+
+	&__right {
+		max-width: 64rem;
+		width: 100%;
+		padding-top: 9rem;
+
+		@media screen and (max-width: $large_tablet) {
+			max-width: 100%;
+			padding-top: 0;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		position: relative;
+
+		> div {
+			position: relative;
+
+			img {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	&__object {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		background: #ffffff;
+		border-radius: calc(#{$br * 4}) 0px 0px 0px;
+		width: 90%;
+		padding: 4rem 6rem 5rem 3rem;
+		transform: translateY(100%);
+		transition: transform 0.5s;
+		z-index: 3;
+
+		@media screen and (max-width: $large_tablet) {
+			padding: 2rem 4.2rem 4.2rem 2rem;
+		}
+	}
+
+	&__box {
+		width: 100%;
+		position: relative;
+		border-radius: calc(#{$br * 4});
+		overflow: hidden;
+		cursor: pointer;
+
+		@media screen and (max-width: $large_tablet) {
+		}
+
+		&:hover {
+			.our-projects__object {
+				transform: translateY(0);
+			}
+
+			.our-projects__img {
+				img {
+					transform: scale(1.08);
+				}
+			}
+		}
+
+		&--center {
+			margin: 0 auto;
+		}
+
+		&--right {
+			margin-left: auto;
+		}
+
+		&--52 {
+			max-width: 52rem;
+			margin-left: auto;
+			margin-bottom: 10rem;
+
+			@media screen and (max-width: $large_tablet) {
+				margin-bottom: 4rem;
+			}
+
+			.our-projects__img {
+				> div {
+					padding-bottom: 100.96%;
+				}
+			}
+		}
+
+		&--56 {
+			max-width: 56rem;
+
+			.our-projects__img {
+				> div {
+					padding-bottom: 114.28%;
+
+					@media screen and (max-width: $large_tablet) {
+						padding-bottom: 100.96%;
+					}
+				}
+			}
+		}
+
+		&--59 {
+			max-width: 59rem;
+			margin-left: auto;
+			margin-bottom: 8rem;
+
+			@media screen and (max-width: $large_tablet) {
+				margin-bottom: 4rem;
+			}
+
+			.our-projects__img {
+				> div {
+					padding-bottom: 89.43%;
+
+					@media screen and (max-width: $large_tablet) {
+						padding-bottom: 100.96%;
+					}
+				}
+			}
+		}
+
+		&--63 {
+			max-width: 63rem;
+
+			.our-projects__img {
+				> div {
+					padding-bottom: 74.6%;
+				}
+			}
+		}
+
+		&--66 {
+			max-width: 66rem;
+
+			@media screen and (max-width: $large_tablet) {
+				margin-bottom: 4rem;
+			}
+
+			.our-projects__img {
+				> div {
+					padding-bottom: 120.9%;
+
+					@media screen and (max-width: $large_tablet) {
+						padding-bottom: 100.96%;
+					}
+				}
+			}
+		}
+
+		&--68 {
+			max-width: 68rem;
+
+			.our-projects__img {
+				> div {
+					padding-bottom: 66.47%;
+				}
+			}
+		}
+
+		&--100 {
+			max-width: 100%;
+
+			.our-projects__img {
+				> div {
+					padding-bottom: 65.96%;
+				}
+			}
+		}
+	}
+}

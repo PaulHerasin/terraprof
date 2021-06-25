@@ -1,0 +1,125 @@
+.advantages-video {
+    padding-bottom: 7rem;
+
+    &__wrap {
+        position: relative;
+    }
+
+    &__img {
+        width: 100%;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(#323436, .7);
+            z-index: 2;
+        }
+
+        >div {
+            position: relative;
+            padding-bottom: 42.34%;
+
+            img {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__bottom {
+        max-width: 153rem;
+        width: 100%;
+        margin: -16rem auto 0;
+        padding: 6.5rem;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 20px rgba(187, 187, 187, 0.2);
+        border-radius: calc(#{$br} * 4);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        z-index: 3;
+        position: relative;
+
+        @media screen and (max-width:$large_tablet) {
+            margin: -3rem auto 0;
+            max-width: 90%;
+            flex-direction: column;
+            padding: 3rem;
+        }
+
+        @media screen and (max-width:$large_mobile) {
+            max-width: calc(100% - 30px);
+            margin: 0 auto;
+            padding: 2rem;
+        }
+    }
+
+    &__item {
+        width: calc((100% - 13rem * 2) / 3);
+
+        @media screen and (max-width:$large_desktop) {
+            width: calc((100% - 10rem * 2) / 3);
+        }
+
+        @media screen and (max-width:$large_tablet) {
+            width: 100%;
+            margin-bottom: 2rem;
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+
+        &-icon {
+            margin-right: 1.6rem;
+            width: 2.4rem;
+
+
+
+            rect {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+
+            @media screen and (max-width:$large_tablet) {
+                margin-right: 1rem;
+                width: 2rem;
+            }
+
+            &--28 {
+                width: 2.8rem;
+
+                @media screen and (max-width:$large_tablet) {
+                    width: 2.2rem;
+                }
+            }
+        }
+
+        &-top {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.6rem;
+        }
+
+        &-title {
+            font-family: $secondary-f;
+            font-weight: 600;
+            font-size: 4rem;
+            line-height: 140%;
+            letter-spacing: 0.02em;
+
+            @media screen and (max-width:$large_tablet) {
+                font-size: 2.2rem;
+            }
+        }
+    }
+}

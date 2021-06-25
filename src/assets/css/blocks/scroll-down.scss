@@ -1,0 +1,69 @@
+.scroll-down {
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: $danger-light;
+	// transition: all .5s;
+
+	&__text {
+		writing-mode: vertical-rl;
+		margin-bottom: 1rem;
+		letter-spacing: 0.02em;
+		transition: all 0.5s;
+	}
+
+	&__scrolldown {
+		width: 2px;
+		height: 12rem;
+	}
+
+	&__line {
+		width: 100%;
+		height: 100%;
+		display: block;
+		background: linear-gradient(
+			to bottom,
+			rgba(red, 0.3) 50%,
+			rgba(255, 255, 255, 0) 50%
+		);
+		background-position: 0 0rem;
+		background-size: 100% 200%;
+		animation: scrolldown 3s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+		transition: all 2s;
+	}
+}
+
+@keyframes scroll {
+	0% {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+
+	40% {
+		opacity: 1;
+	}
+
+	80% {
+		transform: translate(0, 20px);
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes scrolldown {
+	0% {
+		background-position: 0 -12rem;
+	}
+
+	75% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: 0 12rem;
+	}
+}

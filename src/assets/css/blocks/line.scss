@@ -1,0 +1,44 @@
+.line {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 21.1%;
+    height: 100%;
+    background-image: url('~img/svg/title-before.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    opacity: .5;
+
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: rgba(#EBE6E6, .49);
+    // }
+    @media screen and (max-width:$large_tablet) {
+        width: 12rem;
+    }
+
+    &--horiz {
+        transform: translateX(0);
+        left: 12rem;
+        height: 30rem;
+        max-width: 50rem;
+        width: 100%;
+        bottom: 42rem;
+        top: auto;
+        background-image: url('~img/svg/title-before--horiz.svg');
+        z-index: 1;
+        opacity: .15;
+
+        @media screen and (max-width:$large_tablet) {
+            left: 0;
+        }
+    }
+}

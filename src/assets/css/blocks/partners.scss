@@ -1,0 +1,43 @@
+.partners {
+    position: relative;
+    padding-top: 15rem;
+    padding-bottom: 19rem;
+    background: linear-gradient(180deg, #F6F6F6 41.61%, #F6F6F6 41.61%, rgba(246, 246, 246, 0.97) 100%);
+
+    @media screen and (max-width:$large_tablet) {
+        padding: 6rem 0;
+    }
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 54%;
+        z-index: -1;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30rem;
+        height: 30rem;
+        background-image: url('~img/svg/partners-line.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__title {
+        margin-bottom: 10rem;
+        position: relative;
+        z-index: 2;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-bottom: 3rem;
+        }
+    }
+}

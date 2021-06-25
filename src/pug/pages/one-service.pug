@@ -1,0 +1,14 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Одна услуга';
+    - var pageClass = 'one-service';
+
+block content
+    include ../includes/main-img
+    include ../includes/service-name
+    +gallery({})
+    //- include ../includes/gallery
+    include ../includes/connection
+
+//- block script

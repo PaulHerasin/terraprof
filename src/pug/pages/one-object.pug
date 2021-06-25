@@ -1,0 +1,14 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Один обєкт';
+    - var pageClass = 'one-object';
+
+block content
+    include ../includes/library
+    include ../includes/information-object
+    include ../includes/types-robot
+    +gallery({content:'one-object'})
+    include ../includes/connection
+
+//- block script
