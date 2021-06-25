@@ -51,6 +51,7 @@ import './assets/css/blocks/other-projects.scss';
 
 //  ONE-SERVICE
 import './assets/css/blocks/main-img.scss';
+import './assets/css/blocks/process-robots.scss';
 import './assets/css/blocks/service-name.scss';
 import './assets/css/blocks/gallery.scss';
 
