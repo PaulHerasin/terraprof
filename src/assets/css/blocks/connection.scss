@@ -50,6 +50,7 @@
         .simple-title {
             font-weight: 300;
             transition: color .5s;
+            color: $danger-light;
 
             @media screen and (max-width:$large_tablet) {
                 font-size: 3rem;
@@ -79,6 +80,8 @@
                     width: 2rem;
                     height: 2rem;
                     right: calc(100% + 1.5rem);
+                    opacity: 1;
+                    visibility: visible;
                 }
             }
 
