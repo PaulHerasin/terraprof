@@ -18,6 +18,7 @@ if (document.querySelector('.partners-slider')) {
                 spaceBetween: 80,
             },
             1750: {
+                slidesPerView: 4,
                 spaceBetween: 140,
             },
         },

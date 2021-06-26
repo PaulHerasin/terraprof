@@ -1,7 +1,7 @@
 .partners {
     position: relative;
-    padding-top: 15rem;
-    padding-bottom: 19rem;
+    padding-top: 17rem;
+    padding-bottom: 14.5rem;
     background: linear-gradient(180deg, #F6F6F6 41.61%, #F6F6F6 41.61%, rgba(246, 246, 246, 0.97) 100%);
 
     @media screen and (max-width:$large_tablet) {
@@ -32,7 +32,7 @@
     }
 
     &__title {
-        margin-bottom: 10rem;
+        margin-bottom: 6rem;
         position: relative;
         z-index: 2;
 

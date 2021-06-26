@@ -6,7 +6,8 @@
     }
 
     .line {
-        width: 33rem;
+        width: 23.3%;
+        opacity: 1;
 
         @media screen and (max-width:$large_tablet) {
             width: 12rem;

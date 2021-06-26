@@ -140,28 +140,22 @@
 
     &__scroll {
         position: absolute;
-        left: 52%;
+        left: 55%;
         top: 7.5rem;
         transform: translateX(-50%);
 
         @media screen and (max-width:$large_desktop) {
-            left: 58%;
+            left: 57%;
         }
 
         @media screen and (max-width:$large_tablet) {
-            transform: translateX(0);
-            right: 0;
-            left: auto;
+            display: none;
         }
     }
 
     &__wrap {
         display: flex;
         position: relative;
-
-        @media screen and (max-width:$large_tablet) {
-            padding-right: 3rem;
-        }
 
         &-left {
             max-width: 75.5rem;

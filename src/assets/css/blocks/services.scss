@@ -53,7 +53,7 @@
 
         @media screen and (max-width:$large_tablet) {
             width: 100%;
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
         }
     }
 
@@ -71,8 +71,8 @@
             margin-bottom: 8rem;
 
             @media screen and (max-width:$large_tablet) {
-                margin-bottom: 4rem;
-                align-items: center;
+                margin-bottom: 2rem;
+                flex-wrap: wrap;
             }
         }
 
@@ -80,7 +80,7 @@
             margin-bottom: 8rem;
 
             @media screen and (max-width:$large_tablet) {
-                margin-bottom: 4rem;
+                margin-bottom: 2rem;
             }
         }
 
@@ -101,7 +101,13 @@
             width: calc(50% - 4rem);
 
             @media screen and (max-width:$large_tablet) {
-                width: calc(50% - 2rem);
+                width: 100%;
+            }
+        }
+
+        &-left {
+            @media screen and (max-width:$large_tablet) {
+                margin-bottom: 2rem;
             }
         }
     }
@@ -115,7 +121,7 @@
         z-index: 3;
 
         @media screen and (max-width:$large_tablet) {
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
         }
 
         &:hover {
@@ -193,6 +199,10 @@
             position: relative;
             padding-bottom: 133.82%;
 
+            @media screen and (max-width:$large_tablet) {
+                padding-bottom: 50%;
+            }
+
             img {
                 position: absolute;
                 top: 0px;
@@ -208,6 +218,10 @@
 
             >div {
                 padding-bottom: 67.6%;
+
+                @media screen and (max-width:$large_tablet) {
+                    padding-bottom: 50%;
+                }
             }
         }
 
@@ -216,24 +230,40 @@
 
             >div {
                 padding-bottom: 75%;
+
+                @media screen and (max-width:$large_tablet) {
+                    padding-bottom: 50%;
+                }
             }
         }
 
         &--pb101 {
             >div {
                 padding-bottom: 101.33%;
+
+                @media screen and (max-width:$large_tablet) {
+                    padding-bottom: 50%;
+                }
             }
         }
 
         &--pb103 {
             >div {
                 padding-bottom: 103.46%;
+
+                @media screen and (max-width:$large_tablet) {
+                    padding-bottom: 50%;
+                }
             }
         }
 
         &--pb200 {
             >div {
                 padding-bottom: 200.26%;
+
+                @media screen and (max-width:$large_tablet) {
+                    padding-bottom: 50%;
+                }
             }
         }
     }
