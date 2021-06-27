@@ -1,181 +1,186 @@
 .objects {
-    padding-bottom: 15.5rem;
+	padding-bottom: 15.5rem;
 
-    @media screen and (max-width:$large_tablet) {
-        padding-bottom: 10rem;
-    }
+	@media screen and (max-width: $large_tablet) {
+		padding-bottom: 10rem;
+	}
 
-    .title-line {
-        padding-bottom: 2rem;
-    }
+	.title-line {
+		padding-bottom: 2rem;
+	}
 
-    .our-projects__box {
-        margin-bottom: 8rem;
+	.our-projects__box {
+		margin-bottom: 8rem;
 
-        @media screen and (max-width:$large_tablet) {
-            margin-bottom: 4rem;
-        }
+		@media screen and (max-width: $large_tablet) {
+			margin-bottom: 4rem;
+		}
 
-        &:last-child {
-            margin-bottom: 0px;
-        }
+		&:last-child {
+			margin-bottom: 0px;
+		}
 
-        &:hover {
-            .our-projects__img {
-                &::before {
-                    opacity: 1;
-                }
-            }
-        }
-    }
+		&:hover {
+			.our-projects__img {
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+	}
 
-    .our-projects__img {
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg, rgba(50, 56, 65, 0) 0%, rgba(50, 56, 65, 0.3) 100%);
-            z-index: 2;
-            opacity: 0;
-            transition: opacity .5s;
-        }
-    }
+	.our-projects__img {
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(
+				180deg,
+				rgba(50, 56, 65, 0) 0%,
+				rgba(50, 56, 65, 0.3) 100%
+			);
+			z-index: 2;
+			opacity: 0;
+			transition: opacity 0.5s;
+		}
+	}
 
-    &__filter {
-        font-weight: normal;
-        font-size: 1.8rem;
-        display: flex;
-        align-items: center;
+	&__filter {
+		font-weight: normal;
+		font-size: 1.8rem;
+		display: flex;
+		align-items: center;
 
-        @media screen and (max-width:$large_tablet) {
-            font-size: 1.6rem;
-            justify-content: center;
-        }
+		@media screen and (max-width: $large_tablet) {
+			font-size: 1.6rem;
+			justify-content: center;
+		}
 
-        p {
-            cursor: pointer;
-        }
+		p {
+			cursor: pointer;
+		}
 
-        svg {
-            margin-left: 0.5rem;
-            width: 1.8rem;
-            fill: $danger;
+		svg {
+			margin-left: 0.5rem;
+			width: 1.8rem;
+			fill: $danger;
 
-            @media screen and (max-width:$large_tablet) {
-                width: 1.2rem;
-            }
-        }
-    }
+			@media screen and (max-width: $large_tablet) {
+				width: 1.2rem;
+			}
+		}
+	}
 
-    &__list {
-        display: flex;
+	&__list {
+		display: flex;
 
-        &-wrap {
-            background-color: #F6F6F6;
-            padding: 6.5rem 0;
-            margin-bottom: 6.5rem;
+		&-wrap {
+			background-color: #f6f6f6;
+			padding: 6.5rem 0;
+			margin-bottom: 6.5rem;
 
-            @media screen and (max-width:$large_tablet) {
-                padding: 3rem 0;
-                overflow-x: auto;
-                margin-bottom: 3rem;
+			@media screen and (max-width: $large_tablet) {
+				padding: 3rem 0;
+				overflow-x: auto;
+				margin-bottom: 3rem;
 
-                &::-webkit-scrollbar-thumb {
-                    background: rgba($primary-c, .5) !important;
-                    border-radius: 10rem;
-                }
+				&::-webkit-scrollbar-thumb {
+					background: rgba($primary-c, 0.5) !important;
+					border-radius: 10rem;
+				}
 
-                &::-webkit-scrollbar {
-                    height: 0.5rem;
-                }
+				&::-webkit-scrollbar {
+					height: 0.5rem;
+				}
 
-                &::-webkit-scrollbar-track {
-                    border-radius: 10rem;
-                    background: #F6F6F6;
-                }
-            }
-        }
+				&::-webkit-scrollbar-track {
+					border-radius: 10rem;
+					background: #f6f6f6;
+				}
+			}
+		}
 
-        &-link {
-            font-family: $secondary-f;
-            margin-right: 16rem;
-            font-weight: 300;
-            font-size: 3.2rem;
-            letter-spacing: -0.04em;
-            transition: color .5s, text-shadow .5s;
+		&-link {
+			font-family: $secondary-f;
+			margin-right: 16rem;
+			font-weight: 300;
+			font-size: 3.2rem;
+			letter-spacing: -0.04em;
+			transition: color 0.5s, text-shadow 0.5s;
 
-            @media screen and (max-width:$large_desktop) {
-                margin-right: 10rem;
-                white-space: nowrap;
+			@media screen and (max-width: $large_desktop) {
+				margin-right: 10rem;
+				white-space: nowrap;
+			}
 
-            }
+			@media screen and (max-width: $large_tablet) {
+				font-size: 2rem;
+				margin-right: 5rem;
+			}
 
-            @media screen and (max-width:$large_tablet) {
-                font-size: 2rem;
-                margin-right: 5rem;
-            }
+			&:last-child {
+				margin-right: 0px;
+			}
 
-            &:last-child {
-                margin-right: 0px;
-            }
+			&:hover {
+				color: $danger;
+				text-shadow: 0 0 1px $danger, 0 0 1px $danger;
+			}
+		}
+	}
 
-            &:hover {
-                color: $danger;
-                text-shadow: 0 0 1px $danger, 0 0 1px $danger;
-            }
-        }
-    }
+	&__title {
+		text-align: center;
+		margin-bottom: 10.5rem;
 
-    &__title {
-        text-align: center;
-        margin-bottom: 10.5rem;
+		@media screen and (max-width: $large_tablet) {
+			margin-bottom: 5rem;
+		}
+	}
 
-        @media screen and (max-width:$large_tablet) {
-            margin-bottom: 5rem;
-        }
-    }
+	&__scroll {
+		position: absolute;
+		left: 52%;
+		top: 7.5rem;
+		transform: translateX(-50%);
 
-    &__scroll {
-        position: absolute;
-        left: 55%;
-        top: 7.5rem;
-        transform: translateX(-50%);
+		&__scroll {
+			position: absolute;
+			left: 55%;
+			top: 7.5rem;
+			transform: translateX(-50%);
 
-        @media screen and (max-width:$large_desktop) {
-            left: 57%;
-        }
+			@media screen and (max-width: $large_desktop) {
+				left: 57%;
+			}
 
-        @media screen and (max-width:$large_tablet) {
-            display: none;
-        }
-    }
+			@media screen and (max-width: $large_tablet) {
+				display: none;
+			}
+		}
 
-    &__wrap {
-        display: flex;
-        position: relative;
+		@media screen and (max-width: $large_tablet) {
+			padding-right: 3rem;
+		}
 
-        &-left {
-            max-width: 75.5rem;
-            width: 100%;
+		&-left {
+			max-width: 75.5rem;
+			width: 100%;
 
-            @media screen and (max-width:$large_tablet) {
-                max-width: 100%;
-            }
-        }
+			&-right {
+				width: calc(100% - 75.5rem - 9rem);
+				margin-left: 9rem;
+				padding-top: 15.5rem;
 
-        &-right {
-            width: calc(100% - 75.5rem - 9rem);
-            margin-left: 9rem;
-            padding-top: 15.5rem;
-
-            @media screen and (max-width:$large_tablet) {
-                max-width: 100%;
-                margin-left: 0;
-                padding-top: 0;
-            }
-        }
-    }
+				@media screen and (max-width: $large_tablet) {
+					max-width: 100%;
+					margin-left: 0;
+					padding-top: 0;
+				}
+			}
+		}
+	}
 }

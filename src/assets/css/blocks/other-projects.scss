@@ -1,183 +1,188 @@
 .other-projects {
-    padding-bottom: 12rem;
-    padding-top: 10rem;
+	padding-bottom: 12rem;
+	padding-top: 10rem;
+	background-color: #ffffff;
+	position: relative;
+	z-index: 1;
 
-    @media screen and (max-width:$large_tablet) {
-        padding-bottom: 6rem;
-        padding-top: 6rem;
-    }
+	@media screen and (min-width: $large_tablet) {
+		padding-top: 0rem;
+	}
 
-    &__title {
-        margin-bottom: 6rem;
+	@media screen and (max-width: $large_tablet) {
+		padding-bottom: 6rem;
+		padding-top: 6rem;
+	}
 
-        @media screen and (max-width:$large_tablet) {
-            margin-bottom: 3rem;
-        }
-    }
+	&__title {
+		margin-bottom: 6rem;
 
-    &__wrap {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15rem;
+		@media screen and (max-width: $large_tablet) {
+			margin-bottom: 3rem;
+		}
+	}
 
-        @media screen and (max-width:$large_tablet) {
-            margin-bottom: 4rem;
-            flex-direction: column;
-        }
+	&__wrap {
+		display: flex;
+		align-items: center;
+		margin-bottom: 15rem;
 
-        &:last-child {
-            margin-bottom: 0px;
-        }
+		@media screen and (max-width: $large_tablet) {
+			margin-bottom: 4rem;
+			flex-direction: column;
+		}
 
-        &--reverse {
-            flex-direction: row-reverse;
+		&:last-child {
+			margin-bottom: 0px;
+		}
 
-            @media screen and (max-width:$large_tablet) {
-                flex-direction: column;
-            }
+		&--reverse {
+			flex-direction: row-reverse;
 
-            .other-projects__content {
-                padding-left: 0;
-                padding-right: 22.5rem;
+			@media screen and (max-width: $large_tablet) {
+				flex-direction: column;
+			}
 
-                @media screen and (max-width:$large_tablet) {
-                    padding-right: 0;
-                }
-            }
+			.other-projects__content {
+				padding-left: 0;
+				padding-right: 22.5rem;
 
-            .other-projects__img {
-                margin-left: 0;
-                margin-right: 4.5rem;
+				@media screen and (max-width: $large_tablet) {
+					padding-right: 0;
+				}
+			}
 
-                @media screen and (max-width:$large_tablet) {
-                    margin-right: 0;
-                }
-            }
+			.other-projects__img {
+				margin-left: 0;
+				margin-right: 4.5rem;
 
-            .other-projects__content-link {
-                margin-left: initial;
-                margin-right: auto;
+				@media screen and (max-width: $large_tablet) {
+					margin-right: 0;
+				}
+			}
 
-                @media screen and (max-width:$large_tablet) {
-                    margin-right: initial;
-                    margin-left: auto;
-                }
-            }
-        }
-    }
+			.other-projects__content-link {
+				margin-left: initial;
+				margin-right: auto;
 
-    &__content {
-        max-width: 61rem;
-        width: 100%;
-        letter-spacing: 0.02em;
-        padding-left: 22.5rem;
-        display: flex;
-        flex-direction: column;
+				@media screen and (max-width: $large_tablet) {
+					margin-right: initial;
+					margin-left: auto;
+				}
+			}
+		}
+	}
 
-        @media screen and (max-width:$large_tablet) {
-            max-width: 100%;
-            padding-left: 0;
-            margin-bottom: 4rem;
-        }
+	&__content {
+		max-width: 61rem;
+		width: 100%;
+		letter-spacing: 0.02em;
+		padding-left: 22.5rem;
+		display: flex;
+		flex-direction: column;
 
-        &-title {
-            font-weight: 600;
-            font-size: 4rem;
-            line-height: 140%;
-            margin-bottom: 2.5rem;
-            font-family: $secondary-f;
+		@media screen and (max-width: $large_tablet) {
+			max-width: 100%;
+			padding-left: 0;
+			margin-bottom: 4rem;
+		}
 
-            @media screen and (max-width:$large_tablet) {
-                font-size: 2.2rem;
-                margin-bottom: 1.5rem;
-            }
-        }
+		&-title {
+			font-weight: 600;
+			font-size: 4rem;
+			line-height: 140%;
+			margin-bottom: 2.5rem;
+			font-family: $secondary-f;
 
-        &-text {
-            margin-bottom: 2rem;
+			@media screen and (max-width: $large_tablet) {
+				font-size: 2.2rem;
+				margin-bottom: 1.5rem;
+			}
+		}
 
-            @media screen and (max-width:$large_tablet) {
-                margin-bottom: 1.5rem;
-            }
-        }
+		&-text {
+			margin-bottom: 2rem;
 
-        &-link {
-            font-family: $secondary-f;
-            font-size: 2.8rem;
-            letter-spacing: -0.04em;
-            color: $danger-light;
-            margin-left: auto;
-            position: relative;
-            padding-left: calc(2.4rem + 1.2rem);
+			@media screen and (max-width: $large_tablet) {
+				margin-bottom: 1.5rem;
+			}
+		}
 
-            @media screen and (max-width:$large_tablet) {
-                font-size: 1.8rem;
-                padding-left: calc(1.4rem + 1.2rem);
-            }
+		&-link {
+			font-family: $secondary-f;
+			font-size: 2.8rem;
+			letter-spacing: -0.04em;
+			color: $danger-light;
+			margin-left: auto;
+			position: relative;
+			padding-left: calc(2.4rem + 1.2rem);
 
-            &::before {
-                content: "";
-                position: absolute;
-                left: 0px;
-                bottom: -2px;
-                width: 0%;
-                height: 1px;
-                background: $danger-light;
-                opacity: 0;
-                transition: opacity .5s, width .5s;
-            }
+			@media screen and (max-width: $large_tablet) {
+				font-size: 1.8rem;
+				padding-left: calc(1.4rem + 1.2rem);
+			}
 
-            &:hover::before {
-                width: 100%;
-                opacity: 1;
-            }
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0px;
+				bottom: -2px;
+				width: 0%;
+				height: 1px;
+				background: $danger-light;
+				opacity: 0;
+				transition: opacity 0.5s, width 0.5s;
+			}
 
-            &::after {
-                content: '';
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                left: 0;
-                width: 2.4rem;
-                height: 2.4rem;
-                background-image: url('~img/svg/header-arrow.svg');
-                background-repeat: no-repeat;
-                background-size: contain;
-                pointer-events: none;
+			&:hover::before {
+				width: 100%;
+				opacity: 1;
+			}
 
-                @media screen and (max-width:$large_tablet) {
-                    width: 1.4rem;
-                    height: 1.4rem;
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 0;
+				width: 2.4rem;
+				height: 2.4rem;
+				background-image: url('~img/svg/header-arrow.svg');
+				background-repeat: no-repeat;
+				background-size: contain;
+				pointer-events: none;
 
-                }
-            }
+				@media screen and (max-width: $large_tablet) {
+					width: 1.4rem;
+					height: 1.4rem;
+				}
+			}
+		}
+	}
 
-        }
-    }
+	&__img {
+		width: calc(100% - 61rem - 4.5rem);
+		margin-left: 4.5rem;
+		border-radius: calc(#{$br} * 4);
+		overflow: hidden;
 
-    &__img {
-        width: calc(100% - 61rem - 4.5rem);
-        margin-left: 4.5rem;
-        border-radius: calc(#{$br} * 4);
-        overflow: hidden;
+		@media screen and (max-width: $large_tablet) {
+			width: 100%;
+			margin-left: 0;
+		}
 
-        @media screen and (max-width:$large_tablet) {
-            width: 100%;
-            margin-left: 0;
-        }
+		> div {
+			position: relative;
+			padding-bottom: 64.76%;
 
-        >div {
-            position: relative;
-            padding-bottom: 64.76%;
-
-            img {
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-    }
+			img {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
 }

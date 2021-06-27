@@ -8,15 +8,16 @@
 .oh-row {
 	overflow: hidden;
 }
-
-main {
+#scrollbar {
 	overflow: hidden !important;
 
 	&[data-scrollbar] {
 		height: 100vh;
 		z-index: 1;
 	}
+}
 
+main {
 	.pin-spacer {
 		z-index: 1;
 	}

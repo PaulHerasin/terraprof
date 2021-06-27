@@ -3,6 +3,7 @@ import { MainScreen } from "./main-screen"
 import { UnikalnyProjects } from "./unikalny-projects"
 import { OurProjects } from "./our-projects"
 import { Advantages } from "./advantages"
+import { AdvantagesVideo } from "./advantages-video"
 
 if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
   window.scrollbar = Scrollbar.init(document.querySelector('#scrollbar'), {
@@ -33,6 +34,7 @@ let addScrollTrigger = () => {
     UnikalnyProjects()
     Advantages()
     OurProjects()
+    AdvantagesVideo()
   }, 1000)
 
   ScrollTrigger.refresh()

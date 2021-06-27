@@ -5,15 +5,15 @@ export const MainScreen = (timeDelay) => {
   if (mainScreen) {
     if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
 
-      // gsap.fromTo(".main-screen__title h2", {
-      //   opacity: 0,
-      //   y: 100,
+      gsap.fromTo(".main-screen__title h2", {
+        opacity: 0,
+        y: 100,
 
-      // }, {
-      //   opacity: 1,
-      //   y: 0,
-      //   delay: timeDelay
-      // })
+      }, {
+        opacity: 1,
+        y: 0,
+        delay: timeDelay
+      })
 
       gsap.fromTo(".main-screen__text", {
         opacity: 0,
@@ -26,28 +26,24 @@ export const MainScreen = (timeDelay) => {
         delay: timeDelay + 0.5
       })
 
-      // setTimeout(function () {
-      // }, 1000)
 
-      let titleBack = gsap.timeline({
+      ScrollTrigger.create({
+        trigger: ".main-screen",
+        start: 'top top',
+        end: "40% top",
+        pin: ".main-screen .title-line",
+        pinSpacing: false,
+        scrub: 0.5
+      });
+
+      gsap.to('.main-screen .title-line', {
+        opacity: 0,
         scrollTrigger: {
           trigger: ".main-screen",
           start: 'top top',
-          end: "40% top",
-          pin: ".main-screen .title-line",
-          pinSpacing: false,
+          end: "9% top",
           scrub: 0.5
         },
-      })
-
-      titleBack.to('.main-screen .title-line', {
-        opacity: 0,
-        duration: 0.5
-      })
-
-      titleBack.to('.main-screen .title-line', {
-        opacity: 0,
-        duration: 0.5
       })
 
       let mainScreenImg = gsap.timeline({

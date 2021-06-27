@@ -1,8 +1,8 @@
 if (document.querySelector('.projects-slider')) {
   const projectsSliderActive = () => {
     gsap.utils.toArray(
-      [".projects-slider .swiper-slide .projects-slider__img img",
-        ".projects-slider .swiper-slide .projects-slider__img-small img"
+      [".projects-slider .swiper-slide-active .projects-slider__img img",
+        ".projects-slider .swiper-slide-active .projects-slider__img-small img"
       ]).forEach((section) => {
         gsap.fromTo(section, {
           y: "-10%",
@@ -20,7 +20,7 @@ if (document.querySelector('.projects-slider')) {
         });
       });
 
-    gsap.fromTo(".projects-slider .swiper-slide .projects-slider__img-small", {
+    gsap.fromTo(".projects-slider .swiper-slide-active .projects-slider__img-small", {
       y: "50%",
       duration: 0,
       opacity: 0
@@ -28,23 +28,23 @@ if (document.querySelector('.projects-slider')) {
       scrollTrigger: {
         trigger: ".projects-slider",
         top: "top bottom",
-        end: "15% center",
+        end: "top 10%",
         scrub: 0.5
       },
       opacity: 1,
       y: "0%",
       ease: "none"
     })
-    //   gsap.to(".projects-slider .swiper-slide .projects-slider__img img", {
-    //     scrollTrigger: {
-    //       trigger: ".projects-slider .swiper-slide .projects-slider__img",
-    //       top: "top bottom",
-    //       end: "bottom top",
-    //       scrub: 0.5
-    //     },
-    //     y: "10%",
-    //     ease: "none"
-    //   })
+    // gsap.to(".projects-slider .swiper-slide .projects-slider__img img", {
+    //   scrollTrigger: {
+    //     trigger: ".projects-slider .swiper-slide .projects-slider__img",
+    //     top: "top bottom",
+    //     end: "bottom top",
+    //     scrub: 0.5
+    //   },
+    //   y: "10%",
+    //   ease: "none"
+    // })
   }
 
   var swiper = new Swiper('.projects-slider .swiper-container', {
