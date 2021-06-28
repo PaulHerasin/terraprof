@@ -21,10 +21,6 @@
     //     height: 100%;
     //     background-color: rgba(#EBE6E6, .49);
     // }
-    @media screen and (max-width:$large_tablet) {
-        width: 12rem;
-    }
-
     &--horiz {
         transform: translateX(0);
         left: 12rem;
