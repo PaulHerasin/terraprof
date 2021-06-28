@@ -1,26 +1,19 @@
 export const UnikalnyProjects = (timeDelay) => {
   if (document.querySelector(".unikalny-projects")) {
     if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
+      gsap.fromTo([".unikalny-projects .unikalny-projects__title", ".unikalny-projects__subtitle", ".unikalny-projects__text"], {
+        y: 150,
+      }, {
+        y: 0,
+        scrollTrigger: {
+          trigger: ".unikalny-projects",
+          start: "top bottom",
+          end: "center center",
+          scrub: 0.5
+        },
+      })
 
-      // gsap.fromTo(".unikalny-projects__title .oh-row .oh", {
-      //   // opacity: 0,
-      //   y: "50%",
-      //   duration: 0,
-      // }, {
-      //   // opacity: 1,
-      //   y: "0%",
-      //   duration: 0.5,
-      //   stagger: {
-      //     each: 0.5
-      //   },
-      //   scrollTrigger: {
-      //     trigger: ".unikalny-projects",
-      //     top: "20% bottom",
-      //     end: "bottom top",
-      //   },
-      // })
-
-      gsap.fromTo(".unikalny-projects .title-line .oh-row .oh", {
+      gsap.fromTo([".unikalny-projects .title-line .oh-row .oh", ".unikalny-projects .unikalny-projects__text p"], {
         y: "50%",
         duration: 0,
         opacity: 0,
@@ -30,25 +23,12 @@ export const UnikalnyProjects = (timeDelay) => {
         stagger: {
           each: 0.5
         },
+        delay: 0.5,
+        duration: 0.75,
         scrollTrigger: {
           trigger: ".unikalny-projects__title",
-          top: "top bottom",
-          end: "top center",
-        },
-      })
-
-      gsap.fromTo(".unikalny-projects .unikalny-projects__text", {
-        y: "50%",
-        duration: 0,
-        opacity: 0,
-      }, {
-        y: "-20%",
-        opacity: 1,
-        scrollTrigger: {
-          trigger: ".unikalny-projects .unikalny-projects__text",
-          top: "top bottom",
-          end: "top center",
-          scrub: 1
+          start: "top bottom",
+          // toggleActions: "play none none reset"
         },
       })
 

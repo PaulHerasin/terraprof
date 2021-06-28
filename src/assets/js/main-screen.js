@@ -1,5 +1,5 @@
 
-export const MainScreen = () => {
+export const MainScreen = (timeDelay) => {
   if (document.querySelector(".main-screen")) {
     if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
 
@@ -16,7 +16,7 @@ export const MainScreen = () => {
         },
         y: 0,
         duration: 0.75,
-        delay: 4.25,
+        delay: timeDelay,
       })
 
       ScrollTrigger.create({
@@ -30,6 +30,7 @@ export const MainScreen = () => {
 
       gsap.to('.main-screen .title-line', {
         opacity: 0,
+        // scale: 0.95,
         scrollTrigger: {
           trigger: ".main-screen",
           start: 'top top',

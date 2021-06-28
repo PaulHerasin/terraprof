@@ -28,8 +28,8 @@ if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
 }
 
 
-let addScrollTrigger = () => {
-  MainScreen(2)
+export const StartProject = (timeDelay) => {
+  MainScreen(timeDelay)
   setTimeout(function () {
     UnikalnyProjects()
     Advantages()
@@ -39,7 +39,3 @@ let addScrollTrigger = () => {
 
   ScrollTrigger.refresh()
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-  addScrollTrigger()
-});
