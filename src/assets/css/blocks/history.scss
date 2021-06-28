@@ -10,12 +10,20 @@
 
     &__line {
         height: 22.5rem;
-        max-width: 37rem;
-        width: 100%;
+        width: 19.3%;
         position: absolute;
         top: 0;
         left: 0;
         opacity: 80%;
+
+        &--center {
+            left: auto;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 30rem;
+            width: 35%;
+        }
 
         img {
             position: absolute;
@@ -40,6 +48,7 @@
     &__right {
         width: calc(100% - 38.5rem - 12.5rem);
         margin-left: 12.5rem;
+        position: relative;
 
         @media screen and (max-width:$large_tablet) {
             width: 100%;

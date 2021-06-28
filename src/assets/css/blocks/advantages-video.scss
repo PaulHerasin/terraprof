@@ -3,6 +3,14 @@
 
     &__wrap {
         position: relative;
+
+        .line {
+            top: 100%;
+            left: 2%;
+            height: 19rem;
+            width: 20%;
+            transform: translateX(0);
+        }
     }
 
     &__img {
