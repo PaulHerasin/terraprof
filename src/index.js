@@ -1,6 +1,8 @@
 gsap.registerPlugin(ScrollTrigger);
 import './assets/js/const';
 import './assets/js/scrollbarFix';
+import './assets/js/preloader';
+import './assets/css/blocks/preloader.scss';
 import './assets/css/normalize.scss';
 import './assets/css/main.scss';
 

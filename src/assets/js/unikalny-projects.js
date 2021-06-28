@@ -34,7 +34,6 @@ export const UnikalnyProjects = (timeDelay) => {
           trigger: ".unikalny-projects__title",
           top: "top bottom",
           end: "top center",
-          scrub: 1
         },
       })
 

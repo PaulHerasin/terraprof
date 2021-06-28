@@ -1,31 +1,23 @@
 
-export const MainScreen = (timeDelay) => {
-  let mainScreen = document.querySelector(".main-screen")
-
-  if (mainScreen) {
+export const MainScreen = () => {
+  if (document.querySelector(".main-screen")) {
     if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
 
-      gsap.fromTo(".main-screen__title h2", {
+      gsap.fromTo([".main-screen__title h2", ".main-screen__text", ".main-screen__top-img"], {
         opacity: 0,
         y: 100,
-
+        scale: 0.9,
+        duration: 0
       }, {
+        scale: 1,
         opacity: 1,
+        stagger: {
+          each: 0.5
+        },
         y: 0,
-        delay: timeDelay
+        duration: 0.75,
+        delay: 4.25,
       })
-
-      gsap.fromTo(".main-screen__text", {
-        opacity: 0,
-        y: 100,
-        duration: 0,
-      }, {
-        opacity: 1,
-        y: 0,
-        duration: 2,
-        delay: timeDelay + 0.5
-      })
-
 
       ScrollTrigger.create({
         trigger: ".main-screen",
