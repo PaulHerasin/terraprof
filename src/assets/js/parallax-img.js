@@ -5,7 +5,7 @@ document.querySelectorAll(".img-parallax").forEach((section) => {
   }, {
     scrollTrigger: {
       trigger: section,
-      top: "top bottom",
+      start: "top bottom",
       end: "bottom top",
       scrub: 0.5
     },

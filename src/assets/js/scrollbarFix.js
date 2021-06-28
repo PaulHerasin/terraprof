@@ -4,6 +4,7 @@ import { UnikalnyProjects } from "./unikalny-projects"
 import { OurProjects } from "./our-projects"
 import { Advantages } from "./advantages"
 import { AdvantagesVideo } from "./advantages-video"
+import { About } from "./about"
 
 if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
   window.scrollbar = Scrollbar.init(document.querySelector('#scrollbar'), {
@@ -30,6 +31,7 @@ if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
 
 export const StartProject = (timeDelay) => {
   MainScreen(timeDelay)
+  About(timeDelay)
   setTimeout(function () {
     UnikalnyProjects()
     Advantages()

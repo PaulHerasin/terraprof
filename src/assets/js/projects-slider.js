@@ -11,7 +11,7 @@ if (document.querySelector('.projects-slider')) {
         }, {
           scrollTrigger: {
             trigger: section.parentElement,
-            top: "top bottom",
+            start: "top bottom",
             end: "bottom top",
             scrub: 0.5
           },
@@ -27,7 +27,7 @@ if (document.querySelector('.projects-slider')) {
     }, {
       scrollTrigger: {
         trigger: ".projects-slider",
-        top: "top bottom",
+        start: "top bottom",
         end: "top 10%",
         scrub: 0.5
       },
@@ -38,7 +38,7 @@ if (document.querySelector('.projects-slider')) {
     // gsap.to(".projects-slider .swiper-slide .projects-slider__img img", {
     //   scrollTrigger: {
     //     trigger: ".projects-slider .swiper-slide .projects-slider__img",
-    //     top: "top bottom",
+    //     start: "top bottom",
     //     end: "bottom top",
     //     scrub: 0.5
     //   },

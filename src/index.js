@@ -94,3 +94,4 @@ import './assets/js/advantages-video';
 import './assets/js/our-projects';
 import './assets/js/services';
 import './assets/js/connection';
+import './assets/js/about';

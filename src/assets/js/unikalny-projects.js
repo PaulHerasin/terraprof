@@ -1,7 +1,7 @@
 export const UnikalnyProjects = (timeDelay) => {
   if (document.querySelector(".unikalny-projects")) {
     if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
-      gsap.fromTo([".unikalny-projects .unikalny-projects__title", ".unikalny-projects__subtitle", ".unikalny-projects__text"], {
+      gsap.fromTo([".unikalny-projects .unikalny-projects__title", ".unikalny-projects__subtitle", ".unikalny-projects__text", ".unikalny-projects__slider"], {
         y: 150,
       }, {
         y: 0,
@@ -29,18 +29,6 @@ export const UnikalnyProjects = (timeDelay) => {
           trigger: ".unikalny-projects__title",
           start: "top bottom",
           // toggleActions: "play none none reset"
-        },
-      })
-
-      gsap.fromTo('.unikalny-projects__slider', {
-        y: "10%"
-      }, {
-        y: "0%",
-        scrollTrigger: {
-          trigger: ".unikalny-projects__slider",
-          start: 'top bottom',
-          end: "top center",
-          scrub: 0.5
         },
       })
     }
