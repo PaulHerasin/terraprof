@@ -12,6 +12,10 @@
         top: 50%;
         transform: translate(-50%, -50%);
 
+        @media screen and (max-width:$large_desktop) {
+            left: 55%;
+        }
+
         @media screen and (max-width:$large_tablet) {
             display: none;
         }
@@ -42,16 +46,27 @@
 
             .information-object__right {
                 margin-left: 0;
-                margin-right: 10rem;
+                padding-top: 0;
+                max-width: 79.5rem;
+                width: 100%;
 
                 @media screen and (max-width:$large_tablet) {
                     margin-right: 0;
                 }
             }
 
+            .information-object__left {
+                max-width: calc(100% - 10rem - 79.5rem);
+                width: 100%;
+
+                @media screen and (max-width:$large_tablet) {
+                    max-width: 100%;
+                }
+            }
+
             .information-object__img {
                 margin-left: 0;
-                max-width: 79.5rem;
+                max-width: 100%;
                 width: 100%;
 
                 >div {
@@ -59,10 +74,7 @@
                 }
             }
 
-            .information-object__left {
-                max-width: 66rem;
-                width: 100%;
-            }
+
 
             .information-object__left-text {
                 padding-left: 0;
@@ -165,6 +177,7 @@
         // max-width: 66rem;
         width: 100%;
         margin-left: 10rem;
+        padding-top: 3rem;
 
         @media screen and (max-width:$large_tablet) {
             max-width: 100%;
