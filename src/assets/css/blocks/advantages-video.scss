@@ -55,6 +55,7 @@
 		flex-wrap: wrap;
 		z-index: 3;
 		position: relative;
+		overflow: hidden;
 
 		@media screen and (min-width: $large_tablet) {
 			margin: 0 auto;

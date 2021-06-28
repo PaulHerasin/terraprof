@@ -23,7 +23,62 @@ export const AdvantagesVideo = (timeDelay) => {
           trigger: ".advantages-video__wrap",
           start: "top top",
         },
+        onComplete: () => {
+          setTimeout(function () {
+            let bottom = gsap.timeline({
+              scrollTrigger: {
+                trigger: ".advantages-video .advantages-video__bottom-wrap",
+                start: "bottom bottom",
+                end: "bottom top",
+                scrub: 0.5
+              },
+            })
+
+            bottom.to(".advantages-video .advantages-video__bottom", {
+              y: "-25rem",
+              scale: 0.9,
+              duration: 0.5
+            })
+            bottom.to(".advantages-video .advantages-video__item", {
+              opacity: 0,
+              duration: 0.5
+            })
+          }, 1000)
+        }
       })
+
+      gsap.fromTo(".advantages-video .advantages-video__item .oh", {
+        y: "100%",
+        duration: 0,
+        opacity: 0,
+      }, {
+        y: "0%",
+        opacity: 1,
+        delay: 0.5,
+        duration: 0.75,
+        scrollTrigger: {
+          trigger: ".advantages-video .advantages-video__item",
+          start: "top bottom",
+        },
+      })
+
+      gsap.fromTo(".advantages-video .advantages-video__item-text", {
+        y: "100%",
+        duration: 0,
+        opacity: 0,
+      }, {
+        y: "0%",
+        opacity: 1,
+        delay: 1,
+        duration: 0.75,
+        scrollTrigger: {
+          trigger: ".advantages-video .advantages-video__item",
+          start: "top bottom",
+        },
+      })
+
+
+
 
 
 

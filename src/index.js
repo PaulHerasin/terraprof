@@ -95,3 +95,4 @@ import './assets/js/our-projects';
 import './assets/js/services';
 import './assets/js/connection';
 import './assets/js/about';
+import './assets/js/other-projects';

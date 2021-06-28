@@ -54,18 +54,21 @@ export const MainScreen = (timeDelay) => {
 
       mainScreenImg.fromTo('.main-screen__bottom-img--left', {
         y: 200,
+        duration: 0,
       }, {
         y: -100,
       }, 0)
 
       mainScreenImg.fromTo('.main-screen__bottom-img--center', {
         y: 300,
+        duration: 0,
       }, {
         y: -200,
       }, 0)
 
       mainScreenImg.fromTo('.main-screen__bottom-img--right', {
         y: 400,
+        duration: 0,
       }, {
         y: "-100vh",
       }, 0)

@@ -52,30 +52,35 @@ export const About = (timeDelay) => {
 
       aboutParallax.fromTo(".about .about__right-text", {
         y: 25,
+        duration: 0,
       }, {
         y: -25,
       }, 0)
 
       aboutParallax.fromTo(".about .about__title", {
         y: 25,
+        duration: 0,
       }, {
         y: -50,
       }, 0)
 
       aboutParallax.fromTo(".about .about__right-img", {
         y: 0,
+        duration: 0,
       }, {
         y: -25,
       }, 0)
 
       aboutParallax.fromTo(".about .about__left-text", {
         y: 25,
+        duration: 0,
       }, {
         y: -120,
       }, 0)
 
       aboutParallax.fromTo(".about .about__left .oh-row", {
         y: 0,
+        duration: 0,
       }, {
         y: -100,
       }, 0)

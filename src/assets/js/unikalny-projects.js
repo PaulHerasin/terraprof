@@ -3,6 +3,7 @@ export const UnikalnyProjects = (timeDelay) => {
     if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
       gsap.fromTo([".unikalny-projects .unikalny-projects__title", ".unikalny-projects__subtitle", ".unikalny-projects__text", ".unikalny-projects__slider"], {
         y: 150,
+        duration: 0,
       }, {
         y: 0,
         scrollTrigger: {

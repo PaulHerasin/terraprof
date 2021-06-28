@@ -1,7 +1,8 @@
 document.querySelectorAll(".img-parallax").forEach((section) => {
   gsap.fromTo(section.querySelector("img"), {
     y: "-10%",
-    scale: 1.2
+    scale: 1.2,
+    duration: 0,
   }, {
     scrollTrigger: {
       trigger: section,

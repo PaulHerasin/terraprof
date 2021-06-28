@@ -13,24 +13,28 @@ export const Advantages = () => {
 
       advantagesParallax.fromTo('.advantages .advantages__item:nth-of-type(1)', {
         y: "-5%",
+        duration: 0,
       }, {
         y: "0%",
       }, 0)
 
       advantagesParallax.fromTo('.advantages .advantages__item-title', {
         y: 35,
+        duration: 0,
       }, {
         y: 0,
       }, 0)
 
       advantagesParallax.fromTo('.advantages .advantages__item-img', {
         y: 100,
+        duration: 0,
       }, {
         y: 10,
       }, 0)
 
       advantagesParallax.fromTo('.advantages .advantages__item:nth-of-type(2)', {
         y: "-5%",
+        duration: 0,
       }, {
         y: "25%",
       }, 0)
@@ -38,6 +42,7 @@ export const Advantages = () => {
 
       advantagesParallax.fromTo('.advantages .advantages__item:nth-of-type(3)', {
         y: "-5%",
+        duration: 0,
       }, {
         y: "8%",
       }, 0)
@@ -45,6 +50,7 @@ export const Advantages = () => {
       gsap.fromTo(".advantages .wrap", {
         scale: 0.95,
         y: 50,
+        duration: 0,
       }, {
         y: 0,
         scale: 1,
