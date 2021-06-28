@@ -98,14 +98,15 @@
 		&-bottom {
 			position: relative;
 
-			.line {
-				height: 58rem;
-				top: auto;
-				bottom: 0;
-				left: 50%;
-				transform: translateX(-50%);
-			}
-		}
+            .line {
+                height: 58rem;
+                top: auto;
+                bottom: 0;
+                left: 50%;
+                width: 41%;
+                transform: translateX(-50%);
+            }
+        }
 
 		&-left,
 		&-right {

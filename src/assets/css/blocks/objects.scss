@@ -147,11 +147,11 @@
 		top: 7.5rem;
 		transform: translateX(-50%);
 
-		&__scroll {
-			position: absolute;
-			left: 55%;
-			top: 7.5rem;
-			transform: translateX(-50%);
+    &__scroll {
+        position: absolute;
+        left: 52%;
+        top: 7.5rem;
+        transform: translateX(-50%);
 
 			@media screen and (max-width: $large_desktop) {
 				left: 57%;

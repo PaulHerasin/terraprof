@@ -6,6 +6,8 @@
 		padding: 6rem 0;
 	}
 
+
+
 	&__title {
 		margin-bottom: 8.5rem;
 
@@ -35,6 +37,16 @@
 	&__left {
 		max-width: 66rem;
 		width: 100%;
+		position: relative;
+
+		.line {
+			transform: translateX(0);
+			width: 53%;
+			height: 44rem;
+			top: 11%;
+			left: 0;
+			z-index: -1;
+		}
 
 		@media screen and (max-width: $large_tablet) {
 			max-width: 100%;
@@ -172,7 +184,7 @@
 		}
 
 		&--63 {
-			max-width: 63rem;
+			max-width: 90.6%;
 
 			.our-projects__img {
 				>div {
@@ -231,6 +243,12 @@
 		margin-right: 12.5%;
 		margin-top: 4rem;
 
+		@media screen and (max-width:$large_tablet) {
+			margin-right: 0;
+			line-height: 4.6rem;
+			padding: 0 2rem;
+		}
+
 		&:hover {
 			svg {
 				transform: translateX(3px);
@@ -250,6 +268,10 @@
 			margin-left: 1.4rem;
 			transition: transform .5s;
 			will-change: transform;
+
+			@media screen and (max-width:$large_tablet) {
+				width: 2rem;
+			}
 		}
 	}
 }

@@ -7,6 +7,17 @@
 	@media screen and (min-width: $large_tablet) {
 		padding-bottom: 0rem;
 	}
+    &__wrap {
+        position: relative;
+
+        .line {
+            top: 100%;
+            left: 2%;
+            height: 19rem;
+            width: 20%;
+            transform: translateX(0);
+        }
+    }
 
 	&__wrap {
 		position: relative;

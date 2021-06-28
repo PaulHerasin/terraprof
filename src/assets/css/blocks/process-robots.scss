@@ -14,6 +14,10 @@
         }
     }
 
+    &__title {
+        margin-bottom: 2rem;
+    }
+
     &__wrap {
         display: flex;
         align-items: flex-start;
@@ -27,6 +31,10 @@
         max-width: 64rem;
         width: 100%;
         padding-top: 6rem;
+
+        @media screen and (max-width:$large_tablet) {
+            padding-top: 0;
+        }
 
         &-number {
             position: relative;
@@ -60,6 +68,7 @@
                 cursor: pointer;
                 transition: color .5s;
                 padding-bottom: 3rem;
+                font-weight: 400;
 
                 @media screen and (max-width:$large_tablet) {
                     font-size: 2.8rem;
@@ -68,13 +77,13 @@
 
             &.toogles__item-title--active {
                 h3 {
-                    color: #D74346;
+                    color: $danger
                 }
             }
 
             &:hover {
                 h3 {
-                    color: #D74346;
+                    color: $danger;
                 }
 
             }
@@ -98,24 +107,40 @@
         transition: height 1s;
 
         .toogles__item-title--active & {
-            height: calc(13rem + 3rem);
+            height: 16rem;
+
+            @media screen and (max-width:$large_tablet) {
+                height: 19rem;
+            }
         }
 
         &--2 {
             .toogles__item-title--active & {
                 height: calc(30rem + 3rem);
+
+                @media screen and (max-width:$large_tablet) {
+                    height: calc(36rem + 3rem);
+                }
             }
         }
 
         &--3 {
             .toogles__item-title--active & {
                 height: calc(50rem + 3rem);
+
+                @media screen and (max-width:$large_tablet) {
+                    height: calc(56rem + 3rem);
+                }
             }
         }
 
         &--4 {
             .toogles__item-title--active & {
                 height: calc(70rem + 3rem);
+
+                @media screen and (max-width:$large_tablet) {
+                    height: calc(76rem + 3rem);
+                }
             }
         }
 

@@ -17,15 +17,24 @@
 	&__title {
 		margin-bottom: 6rem;
 
-		@media screen and (max-width: $large_tablet) {
-			margin-bottom: 3rem;
-		}
-	}
+    &__wrap {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15rem;
+        position: relative;
 
-	&__wrap {
-		display: flex;
-		align-items: center;
-		margin-bottom: 15rem;
+        .line {
+            transform: translateX(0);
+            height: 54rem;
+            width: 24%;
+            top: 100%;
+            z-index: -1;
+        }
+
+        @media screen and (max-width:$large_tablet) {
+            margin-bottom: 4rem;
+            flex-direction: column;
+        }
 
 		@media screen and (max-width: $large_tablet) {
 			margin-bottom: 4rem;
