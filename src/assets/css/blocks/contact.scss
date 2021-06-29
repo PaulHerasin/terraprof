@@ -1,241 +1,240 @@
 .contact {
-    position: relative;
-    font-family: $additional-f;
-    font-weight: 600;
-    color: #323841;
-    letter-spacing: 0.02em;
-    padding-bottom: 10rem;
-    position: relative;
-    background-color: rgba(#F6F6F6, 0.8);
+	position: relative;
+	font-family: $additional-f;
+	font-weight: 600;
+	color: #323841;
+	letter-spacing: 0.02em;
+	padding-bottom: 10rem;
+	position: relative;
+	background-color: rgba(#f6f6f6, 0.8);
 
-    @media screen and (max-width:$large_tablet) {
-        padding-bottom: 6rem;
-    }
+	@media screen and (max-width: $large_tablet) {
+		padding-bottom: 6rem;
+	}
 
-    // &::before {
-    //     content: '';
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //     // background: rgba(#F6F6F6, 0.8);
-    //     background: linear-gradient(0deg, rgba(246, 246, 246, 0.8), rgba(246, 246, 246, 0.8));
-    // }
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 18.4%;
-        height: 100%;
-        background-image: url('~img/svg/contact-line1.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        z-index: 3;
-    }
+	// &::before {
+	//     content: '';
+	//     position: absolute;
+	//     top: 0;
+	//     left: 0;
+	//     width: 100%;
+	//     height: 100%;
+	//     // background: rgba(#F6F6F6, 0.8);
+	//     background: linear-gradient(0deg, rgba(246, 246, 246, 0.8), rgba(246, 246, 246, 0.8));
+	// }
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 18.4%;
+		height: 100%;
+		background-image: url('~img/svg/contact-line1.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		z-index: 3;
+	}
 
-    &__bg {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 2%;
-    }
+	&__bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		opacity: 2%;
+	}
 
-    &__wrap {
-        max-width: 132rem;
-        display: flex;
-        align-items: flex-start;
-        margin-left: 10.5%;
-        position: relative;
-        z-index: 4;
+	&__wrap {
+		max-width: 132rem;
+		display: flex;
+		align-items: flex-start;
+		margin-left: 10.5%;
+		position: relative;
+		z-index: 4;
 
-        @media screen and (max-width:$large_tablet) {
-            padding-left: 15px;
-            padding-right: 15px;
-            max-width: $large_mobile;
-            width: 100%;
-            margin: 0 auto;
-            flex-direction: column;
-        }
+		@media screen and (max-width: $large_tablet) {
+			padding-left: 15px;
+			padding-right: 15px;
+			max-width: $large_mobile;
+			width: 100%;
+			margin: 0 auto;
+			flex-direction: column;
+		}
+	}
 
-    }
+	&__info {
+		background: #ffffff;
+		border-radius: calc(#{$br} * 4);
+		max-width: 58rem;
+		width: 100%;
+		margin-top: -9.5rem;
+		padding: 10.5rem 11rem;
+		filter: drop-shadow(4px 4px 40px rgba(74, 80, 89, 0.1));
 
-    &__info {
-        background: #FFFFFF;
-        border-radius: calc(#{$br} * 4);
-        max-width: 58rem;
-        width: 100%;
-        margin-top: -9.5rem;
-        padding: 10.5rem 11rem;
-        filter: drop-shadow(4px 4px 40px rgba(74, 80, 89, 0.1));
+		@media screen and (max-width: $large_tablet) {
+			margin-top: -4rem;
+			padding: 5rem;
+			margin-bottom: 4rem;
+		}
 
-        @media screen and (max-width:$large_tablet) {
-            margin-top: -4rem;
-            padding: 5rem;
-            margin-bottom: 4rem;
-        }
+		&-box {
+			margin-bottom: 5rem;
 
-        &-box {
-            margin-bottom: 5rem;
+			@media screen and (max-width: $large_tablet) {
+				margin-bottom: 3rem;
+			}
+		}
 
-            @media screen and (max-width:$large_tablet) {
-                margin-bottom: 3rem;
-            }
-        }
+		&-subtitle {
+			font-size: 1.2rem;
+			line-height: 16/12 * 1;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			margin-bottom: 1rem;
 
-        &-subtitle {
-            font-size: 1.2rem;
-            line-height: 16/12*1;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
+			@media screen and (max-width: $large_tablet) {
+				font-size: 1rem;
+				margin-bottom: 0.5rem;
+			}
+		}
 
-            @media screen and (max-width:$large_tablet) {
-                font-size: 1rem;
-                margin-bottom: 0.5rem;
-            }
-        }
+		&-link {
+			position: relative;
 
-        &-link {
-            position: relative;
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0px;
+				bottom: -2px;
+				width: 0%;
+				height: 1px;
+				background: #323841;
+				opacity: 0;
+				transition: opacity 0.5s, width 0.5s;
+			}
 
-            &::before {
-                content: "";
-                position: absolute;
-                left: 0px;
-                bottom: -2px;
-                width: 0%;
-                height: 1px;
-                background: #323841;
-                opacity: 0;
-                transition: opacity .5s, width .5s;
-            }
+			&:hover::before {
+				width: 100%;
+				opacity: 1;
+			}
+		}
 
-            &:hover::before {
-                width: 100%;
-                opacity: 1;
-            }
-        }
+		&-row {
+			display: flex;
+			align-items: center;
+			position: relative;
+			margin-bottom: 1rem;
+			padding-top: calc(3.2rem + 1rem);
 
-        &-row {
-            display: flex;
-            align-items: center;
-            position: relative;
-            margin-bottom: 1rem;
-            padding-top: calc(3.2rem + 1rem);
+			@media screen and (max-width: $large_tablet) {
+				padding-top: calc(2.2rem + 0.5rem);
+			}
 
-            @media screen and (max-width:$large_tablet) {
-                padding-top: calc(2.2rem + 0.5rem);
-            }
+			&:last-child {
+				margin-bottom: 0px;
+			}
 
-            &:last-child {
-                margin-bottom: 0px;
-            }
+			&:first-child {
+				padding-top: calc(5.2rem + 1rem);
 
-            &:first-child {
-                padding-top: calc(5.2rem + 1rem);
+				@media screen and (max-width: $large_tablet) {
+					padding-top: calc(3.5rem + 0.5rem);
+				}
 
-                @media screen and (max-width:$large_tablet) {
-                    padding-top: calc(3.5rem + 0.5rem);
-                }
+				.contact__info-icon {
+					&::before {
+						height: 5.2rem;
 
-                .contact__info-icon {
-                    &::before {
-                        height: 5.2rem;
+						@media screen and (max-width: $large_tablet) {
+							height: 3.5rem;
+						}
+					}
+				}
+			}
+		}
 
-                        @media screen and (max-width:$large_tablet) {
-                            height: 3.5rem;
-                        }
-                    }
-                }
-            }
-        }
+		&-icon {
+			margin-right: 2.5rem;
+			position: relative;
 
-        &-icon {
-            margin-right: 2.5rem;
-            position: relative;
+			svg {
+				fill: $danger;
+				width: 2.4rem;
 
-            svg {
-                fill: $danger;
-                width: 2.4rem;
+				@media screen and (max-width: $large_tablet) {
+					width: 1.6rem;
+				}
+			}
 
-                @media screen and (max-width:$large_tablet) {
-                    width: 1.6rem;
-                }
-            }
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: calc(100% + 1rem);
+				left: calc(2.6rem / 2 - 0.5px);
+				width: 1px;
+				height: 3.2rem;
+				background-color: rgba(#666e7a, 0.3);
 
-            &::before {
-                content: '';
-                position: absolute;
-                bottom: calc(100% + 1rem);
-                left: calc(2.6rem / 2 - 0.5px);
-                width: 1px;
-                height: 3.2rem;
-                background-color: rgba(#666E7A, 0.3);
+				@media screen and (max-width: $large_tablet) {
+					left: calc(1.6rem / 2 - 0.5px);
+					height: 2.2rem;
+					bottom: calc(100% + 0.5rem);
+				}
+			}
+		}
+	}
 
-                @media screen and (max-width:$large_tablet) {
-                    left: calc(1.6rem / 2 - 0.5px);
-                    height: 2.2rem;
-                    bottom: calc(100% + 0.5rem);
-                }
-            }
-        }
-    }
+	&__socials {
+		&-title {
+			font-size: 1.8rem;
+			line-height: 25/18 * 1;
+			margin-bottom: 3.2rem;
 
-    &__socials {
-        &-title {
-            font-size: 1.8rem;
-            line-height: 25/18*1;
-            margin-bottom: 3.2rem;
+			@media screen and (max-width: $large_tablet) {
+				font-size: 1.6rem;
+				margin-bottom: 2rem;
+			}
+		}
+	}
 
-            @media screen and (max-width:$large_tablet) {
-                font-size: 1.6rem;
-                margin-bottom: 2rem;
-            }
-        }
-    }
+	&__form {
+		width: calc(100% - 58rem - 17.5rem);
+		margin-left: 17.5rem;
+		padding-top: 8.5rem;
 
-    &__form {
-        width: calc(100% - 58rem - 17.5rem);
-        margin-left: 17.5rem;
-        padding-top: 8.5rem;
+		@media screen and (max-width: $large_tablet) {
+			width: 100%;
+			margin-left: 0;
+			padding-top: 0;
+		}
 
-        @media screen and (max-width:$large_tablet) {
-            width: 100%;
-            margin-left: 0;
-            padding-top: 0;
-        }
+		&-title {
+			font-weight: 500;
+			font-size: 3.2rem;
+			line-height: 44/32 * 1;
+			margin-bottom: 1.6rem;
 
-        &-title {
-            font-weight: 500;
-            font-size: 3.2rem;
-            line-height: 44/32*1;
-            margin-bottom: 1.6rem;
+			@media screen and (max-width: $large_tablet) {
+				font-size: 2.4rem;
+			}
 
-            @media screen and (max-width:$large_tablet) {
-                font-size: 2.4rem;
-            }
+			.contact__info & {
+				margin-bottom: 1rem;
+			}
+		}
 
-            .contact__info & {
-                margin-bottom: 1rem;
-            }
-        }
+		&-descr {
+			font-size: 1.2rem;
+			line-height: 16/12 * 1;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			margin-bottom: 2rem;
 
-        &-descr {
-            font-size: 1.2rem;
-            line-height: 16/12*1;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-bottom: 2rem;
-
-            @media screen and (max-width:$large_tablet) {
-                font-size: 1rem;
-            }
-        }
-    }
+			@media screen and (max-width: $large_tablet) {
+				font-size: 1rem;
+			}
+		}
+	}
 }

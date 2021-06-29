@@ -14,3 +14,4 @@ document.querySelectorAll(".img-parallax").forEach((section) => {
     ease: "none"
   });
 });
+

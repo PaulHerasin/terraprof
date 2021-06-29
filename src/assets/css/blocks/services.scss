@@ -5,7 +5,7 @@
 
 	&__hide-page {
 		position: fixed;
-		z-index: 1;
+		z-index: 999999;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -98,15 +98,15 @@
 		&-bottom {
 			position: relative;
 
-            .line {
-                height: 58rem;
-                top: auto;
-                bottom: 0;
-                left: 50%;
-                width: 41%;
-                transform: translateX(-50%);
-            }
-        }
+			.line {
+				height: 58rem;
+				top: auto;
+				bottom: 0;
+				left: 50%;
+				width: 41%;
+				transform: translateX(-50%);
+			}
+		}
 
 		&-left,
 		&-right {

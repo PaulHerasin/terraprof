@@ -57,7 +57,7 @@ export const About = (timeDelay) => {
         y: -25,
       }, 0)
 
-      aboutParallax.fromTo(".about .about__title", {
+      aboutParallax.fromTo(".about .title-line", {
         y: 25,
         duration: 0,
       }, {

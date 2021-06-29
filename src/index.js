@@ -101,3 +101,4 @@ import './assets/js/information-object';
 import './assets/js/gallery';
 import './assets/js/service-name';
 import './assets/js/process-robots';
+import './assets/js/types-robot';

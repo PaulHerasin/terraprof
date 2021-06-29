@@ -18,6 +18,13 @@ export const Services = (timeDelay) => {
         delay: timeDelay
       })
 
+      gsap.from(".services .services__columns-top", {
+        y: 100,
+        opacity: 0,
+        duration: 0.75,
+        delay: timeDelay + 0.75
+      })
+
       gsap.to(".services .services__content", {
         y: -100,
         scale: 0.9,
@@ -28,6 +35,8 @@ export const Services = (timeDelay) => {
           scrub: 0.5
         }
       })
+
+
 
       document.querySelectorAll('.services .services__box').forEach(element => {
         setTimeout(function () {
@@ -52,6 +61,7 @@ export const Services = (timeDelay) => {
             if (document.querySelector(".services__hide-page")) {
               document.querySelector(".services__hide-page").remove()
             }
+            document.querySelector(".preloader").remove()
             let div = document.createElement('img');
             div.classList.add("services__hide-page")
             div.setAttribute("src", element.querySelector("img").getAttribute("src"))

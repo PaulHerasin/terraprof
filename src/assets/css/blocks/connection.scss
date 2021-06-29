@@ -1,4 +1,15 @@
 .connection {
+	position: relative;
+
+	// .contact {
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	height: 100vh;
+	// 	z-index: 2;
+	// }
+
 	&__wrap {
 		padding: 18rem 0;
 		position: relative;
@@ -8,17 +19,17 @@
 		}
 	}
 
-    &__line {
-        width: 21%;
-        height: 30rem;
-        background-image: url('~img/svg/connection-line.svg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: absolute;
-        right: 2%;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+	&__line {
+		width: 21%;
+		height: 30rem;
+		background-image: url('~img/svg/connection-line.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: absolute;
+		right: 2%;
+		top: 50%;
+		transform: translateY(-50%);
+	}
 
 	&__bg {
 		position: absolute;

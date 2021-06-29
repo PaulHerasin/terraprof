@@ -12,6 +12,7 @@ import { InformationObject } from "./information-object"
 import { Gallery } from "./gallery"
 import { ServiceName } from "./service-name"
 import { ProcessRobots } from "./process-robots"
+import { TypesRobot } from "./types-robot"
 
 if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
   window.scrollbar = Scrollbar.init(document.querySelector('#scrollbar'), {
@@ -51,6 +52,7 @@ export const StartProject = (timeDelay) => {
     Gallery()
     ServiceName()
     ProcessRobots()
+    TypesRobot()
   }, 1000)
 
   ScrollTrigger.refresh()
