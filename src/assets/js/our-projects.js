@@ -59,17 +59,6 @@ export const OurProjects = (timeDelay) => {
           // toggleActions: "play none none reset"
         },
       })
-
-      // gsap.to(".our-projects .scroll-down", {
-      //   scrollTrigger: {
-      //     trigger: ".our-projects__scroll",
-      //     start: "top bottom",
-      //     end: "bottom center",
-      //     pin: ".our-projects__scroll .scroll-down",
-      //     pinSpacing: false,
-      //     scrub: 0.5
-      //   },
-      // })
     }
   }
 }

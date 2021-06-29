@@ -20,10 +20,11 @@ export const Services = (timeDelay) => {
 
       gsap.to(".services .services__content", {
         y: -100,
+        scale: 0.9,
         scrollTrigger: {
           trigger: ".services",
           start: "1% top",
-          end: "center bottom",
+          end: "1000 top",
           scrub: 0.5
         }
       })

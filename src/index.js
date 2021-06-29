@@ -96,3 +96,8 @@ import './assets/js/services';
 import './assets/js/connection';
 import './assets/js/about';
 import './assets/js/other-projects';
+import './assets/js/library';
+import './assets/js/information-object';
+import './assets/js/gallery';
+import './assets/js/service-name';
+import './assets/js/process-robots';

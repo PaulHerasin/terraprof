@@ -30,94 +30,36 @@ export const OtherProjects = () => {
         },
       })
 
-      // gsap.fromTo(".other-projects .other-projects__title", {
-      //   y: 50,
-      //   duration: 0,
-      // }, {
-      //   y: -100,
-      //   scrollTrigger: {
-      //     trigger: ".other-projects",
-      //     start: "top bottom",
-      //     end: "top top",
-      //     scrub: 0.5
-      //   },
-      // })
+      document.querySelectorAll(".other-projects .other-projects__wrap").forEach(element => {
 
-      gsap.fromTo(".other-projects .other-projects__wrap", {
-        y: 100,
-        duration: 0,
-      }, {
-        y: -150,
-        scrollTrigger: {
-          trigger: ".other-projects .other-projects__wrap",
-          start: "top bottom",
-          end: "top top",
-          scrub: 0.5
-        },
+        let otherProjectsWrap = gsap.timeline({
+          scrollTrigger: {
+            trigger: element,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 0.5
+          }
+        })
+
+        otherProjectsWrap.fromTo(element, {
+          y: 100,
+          duration: 0,
+        }, {
+          y: -150,
+        }, 0)
+
+        otherProjectsWrap.fromTo(element.querySelector(".other-projects__content"), {
+          y: 50,
+          duration: 0,
+        }, {
+          y: -50,
+        }, 0)
+
+        otherProjectsWrap.to(element.querySelector(".other-projects__img"), {
+          scale: 0.95,
+          delay: 0.5,
+        }, 0)
       })
-
-
-
-
-
-      // advantagesParallax.fromTo('.advantages .advantages__item-title', {
-      //   y: 35,
-      //   duration: 0,
-      // }, {
-      //   y: 0,
-      // }, 0)
-
-      // advantagesParallax.fromTo('.advantages .advantages__item-img', {
-      //   y: 100,
-      //   duration: 0,
-      // }, {
-      //   y: 10,
-      // }, 0)
-
-      // advantagesParallax.fromTo('.advantages .advantages__item:nth-of-type(2)', {
-      //   y: "-5%",
-      //   duration: 0,
-      // }, {
-      //   y: "25%",
-      // }, 0)
-
-
-      // advantagesParallax.fromTo('.advantages .advantages__item:nth-of-type(3)', {
-      //   y: "-5%",
-      //   duration: 0,
-      // }, {
-      //   y: "8%",
-      // }, 0)
-
-      // gsap.fromTo(".advantages .wrap", {
-      //   scale: 0.95,
-      //   y: 50,
-      //   duration: 0,
-      // }, {
-      //   y: 0,
-      //   scale: 1,
-      //   scrollTrigger: {
-      //     trigger: ".advantages",
-      //     start: "top bottom",
-      //     end: "top top",
-      //     scrub: 0.5
-      //   },
-      // })
-
-      // gsap.fromTo(".advantages .advantages__title .oh-row .oh", {
-      //   y: "100%",
-      //   duration: 0,
-      //   opacity: 0,
-      // }, {
-      //   y: "0%",
-      //   opacity: 1,
-      //   delay: 0.5,
-      //   scrollTrigger: {
-      //     trigger: ".advantages .advantages__title",
-      //     start: "top bottom",
-      //     end: "bottom bottom",
-      //   },
-      // })
     }
   }
 }
