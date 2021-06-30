@@ -3,8 +3,8 @@ export const OurProjects = (timeDelay) => {
     if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
       gsap.to(".our-projects .scroll-down", {
         scrollTrigger: {
-          trigger: ".our-projects__scroll",
-          start: "100 center",
+          trigger: ".our-projects .our-projects__scroll",
+          start: "top center",
           end: "bottom bottom",
           pin: ".our-projects__scroll .scroll-down",
           pinSpacing: false,

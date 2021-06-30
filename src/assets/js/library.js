@@ -61,10 +61,7 @@ export const Library = (timeDelay) => {
         },
       })
 
-      libraryImg.fromTo(['.library .library__right .library__video', '.library .library__right .video'], {
-        y: 400,
-        duration: 0,
-      }, {
+      libraryImg.to(['.library .library__right .library__video', '.library .library__right .video'], {
         y: -600,
       }, 0)
     }

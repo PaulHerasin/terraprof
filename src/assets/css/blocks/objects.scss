@@ -143,43 +143,42 @@
 
 	&__scroll {
 		position: absolute;
+		height: 100%;
 		left: 52%;
 		top: 7.5rem;
 		transform: translateX(-50%);
 
-    &__scroll {
-        position: absolute;
-        left: 52%;
-        top: 7.5rem;
-        transform: translateX(-50%);
-
-			@media screen and (max-width: $large_desktop) {
-				left: 57%;
-			}
-
-			@media screen and (max-width: $large_tablet) {
-				display: none;
-			}
+		@media screen and (max-width: $large_desktop) {
+			left: 57%;
 		}
 
 		@media screen and (max-width: $large_tablet) {
-			padding-right: 3rem;
+			display: none;
 		}
+	}
+
+	&__wrap {
+		display: flex;
+		position: relative;
 
 		&-left {
 			max-width: 75.5rem;
 			width: 100%;
 
-			&-right {
-				width: calc(100% - 75.5rem - 9rem);
-				margin-left: 9rem;
-				padding-top: 15.5rem;
+			@media screen and (max-width: $large_tablet) {
+				max-width: 100%;
+			}
+		}
 
-				@media screen and (max-width: $large_tablet) {
-					max-width: 100%;
-					margin-left: 0;
-					padding-top: 0;
-				}
+		&-right {
+			width: calc(100% - 75.5rem - 9rem);
+			margin-left: 9rem;
+			padding-top: 15.5rem;
+
+			@media screen and (max-width: $large_tablet) {
+				max-width: 100%;
+				margin-left: 0;
+				padding-top: 0;
 			}
 		}
 	}

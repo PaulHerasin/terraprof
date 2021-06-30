@@ -13,6 +13,7 @@ import { Gallery } from "./gallery"
 import { ServiceName } from "./service-name"
 import { ProcessRobots } from "./process-robots"
 import { TypesRobot } from "./types-robot"
+import { Objects } from "./objects"
 
 if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
   window.scrollbar = Scrollbar.init(document.querySelector('#scrollbar'), {
@@ -42,6 +43,7 @@ export const StartProject = (timeDelay) => {
   About(timeDelay)
   Services(timeDelay)
   Library(timeDelay)
+  Objects(timeDelay)
   setTimeout(function () {
     UnikalnyProjects()
     Advantages()
