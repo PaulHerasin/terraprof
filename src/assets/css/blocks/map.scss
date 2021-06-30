@@ -38,22 +38,5 @@
                 object-fit: cover;
             }
         }
-
-        &:hover {
-            .map__bg {
-                opacity: 0;
-                visibility: hidden;
-            }
-        }
-    }
-
-    &__bg {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: opacity .5s, visibility .5s;
     }
 }
