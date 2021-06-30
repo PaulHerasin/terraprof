@@ -133,8 +133,14 @@
                 }
             }
 
-            .services__img::before {
-                opacity: 0;
+            .services__img {
+                &::before {
+                    opacity: 0;
+                }
+
+                >div {
+                    transform: scale(1.08);
+                }
             }
         }
 
@@ -199,6 +205,7 @@
         >div {
             position: relative;
             padding-bottom: 133.82%;
+            transition: 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) transform;
 
             @media screen and (max-width:$large_tablet) {
                 padding-bottom: 50%;

@@ -72,6 +72,7 @@
 
 		>div {
 			position: relative;
+			transition: 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) transform;
 
 			img {
 				position: absolute;
@@ -80,7 +81,7 @@
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
-				transition: 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) transform;
+
 			}
 		}
 	}
@@ -119,7 +120,7 @@
 			}
 
 			.our-projects__img {
-				img {
+				>div {
 					transform: scale(1.08);
 				}
 			}
