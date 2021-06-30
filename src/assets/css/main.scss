@@ -15,14 +15,6 @@ main {
 	&[data-scrollbar] {
 		height: 100vh;
 		z-index: 1;
-
-		@media screen and (min-width: $large-tablet) {
-			padding-bottom: $footer-height;
-
-			&.scrollbar--footer {
-				pointer-events: none;
-			}
-		}
 	}
 
 	.pin-spacer {
