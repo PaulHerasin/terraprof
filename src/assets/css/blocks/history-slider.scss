@@ -151,4 +151,13 @@
             }
         }
     }
+
+    .swiper-slide {
+        transition: opacity .5s;
+        opacity: 1;
+
+        &-prev {
+            opacity: 0;
+        }
+    }
 }
