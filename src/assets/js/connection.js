@@ -29,4 +29,66 @@ if (document.querySelector(".connection")) {
       delay: 0.25,
     })
   })
+
+  document.querySelector(".connection .connection__wrap").addEventListener('mouseenter',
+    function () {
+      gsap.to(".connection .connection__bg-white", {
+        css: {
+          top: "100%",
+        },
+        ease: "power1.out",
+      })
+      gsap.fromTo(".connection .connection__bg", {
+        scale: 1.3,
+        y: 0,
+      }, {
+        y: 20,
+        ease: "power1.out",
+        duration: 0.5
+      })
+      gsap.to(".connection__subtitle", {
+        css: {
+          color: "#ffffff"
+        },
+        ease: "power1.out",
+        duration: 0.5
+      })
+
+      gsap.to(".connection__title", {
+        css: {
+          color: "#ffffff"
+        },
+        ease: "power1.out",
+        duration: 0.5
+      })
+    })
+
+  document.querySelector(".connection .connection__wrap").addEventListener('mouseleave',
+    function () {
+      gsap.to(".connection .connection__bg-white", {
+        css: {
+          top: "0%",
+        },
+      })
+      gsap.to(".connection .connection__bg", {
+        y: 0,
+        ease: "power1.out",
+        duration: 0.5
+      })
+      gsap.to(".connection__subtitle", {
+        css: {
+          color: "#657081"
+        },
+        ease: "power1.out",
+        duration: 0.5
+      })
+
+      gsap.to(".connection__title", {
+        css: {
+          color: "#272425"
+        },
+        ease: "power1.out",
+        duration: 0.5
+      })
+    })
 }

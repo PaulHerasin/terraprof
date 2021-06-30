@@ -7,7 +7,7 @@ export const Advantages = () => {
           trigger: ".advantages .advantages__wrap",
           start: "top bottom",
           end: "bottom bottom",
-          scrub: 0
+          scrub: 1
         },
       })
 
@@ -25,12 +25,12 @@ export const Advantages = () => {
         y: 0,
       }, 0)
 
-      advantagesParallax.fromTo('.advantages .advantages__item-img', {
-        y: 100,
-        duration: 0,
-      }, {
-        y: 10,
-      }, 0)
+      // advantagesParallax.fromTo('.advantages .advantages__item-img', {
+      //   y: 100,
+      //   duration: 0,
+      // }, {
+      //   y: 10,
+      // }, 0)
 
       advantagesParallax.fromTo('.advantages .advantages__item:nth-of-type(2)', {
         y: "-5%",

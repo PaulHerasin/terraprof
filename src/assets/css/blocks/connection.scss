@@ -1,18 +1,10 @@
 .connection {
 	position: relative;
 
-	// .contact {
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	width: 100%;
-	// 	height: 100vh;
-	// 	z-index: 2;
-	// }
-
 	&__wrap {
 		padding: 18rem 0;
 		position: relative;
+		overflow: hidden;
 
 		@media screen and (max-width: $large_tablet) {
 			padding: 10rem 0;
@@ -31,6 +23,17 @@
 		transform: translateY(-50%);
 	}
 
+	&__bg-white {
+		position: absolute;
+		left: 0;
+		top: 0%;
+		width: 100%;
+		height: 100%;
+		opacity: 0.95;
+		background-color: #fff;
+		z-index: -1;
+	}
+
 	&__bg {
 		position: absolute;
 		left: 0;
@@ -38,7 +41,7 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		opacity: 5%;
+		z-index: -2;
 	}
 
 	&__subtitle {

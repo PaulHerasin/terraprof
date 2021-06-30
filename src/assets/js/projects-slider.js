@@ -47,7 +47,12 @@ if (document.querySelector('.projects-slider')) {
     // })
   }
 
-  const titleSliderDefaul = (timeDelay) => {
+  const sliderDefaul = () => {
+    gsap.to(".swiper-slide-active .projects-slider__img-small", {
+      y: "100%",
+      opacity: 0,
+      duration: 0,
+    })
     gsap.to(".swiper-slide-active .projects-slider__object .oh", {
       y: "100%",
       opacity: 0,
@@ -55,7 +60,13 @@ if (document.querySelector('.projects-slider')) {
     })
   }
 
-  const titleSliderChange = (timeDelay) => {
+  const sliderChange = () => {
+    gsap.to(".swiper-slide-active .projects-slider__img-small", {
+      y: "0%",
+      opacity: 1,
+      duration: 1,
+    })
+
     gsap.to(".swiper-slide-active .projects-slider__object .oh", {
       y: "0%",
       opacity: 1,
@@ -63,7 +74,7 @@ if (document.querySelector('.projects-slider')) {
       stagger: {
         each: 0.35
       },
-      delay: timeDelay,
+      // delay: 0.5,
       scrollTrigger: {
         trigger: ".swiper-slide-active .projects-slider__object",
         start: "top bottom",
@@ -104,9 +115,9 @@ if (document.querySelector('.projects-slider')) {
         }.bind(this), 500);
       },
       slideChangeTransitionStart: function () {
-        titleSliderDefaul()
+        sliderDefaul()
         setTimeout(function () {
-          titleSliderChange()
+          sliderChange()
         }, 1000)
       },
     }
