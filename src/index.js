@@ -19,7 +19,6 @@ import './assets/css/blocks/line.scss';
 import './assets/css/blocks/content.scss';
 import './assets/css/blocks/projects-slider.scss';
 import './assets/css/blocks/mobile-menu.scss';
-import './assets/css/blocks/popup.scss';
 import './assets/css/blocks/header.scss';
 import './assets/css/blocks/footer.scss';
 import './assets/css/blocks/partners-slider.scss';
@@ -73,6 +72,7 @@ import './assets/css/blocks/contact.scss';
 
 // JS  
 import './assets/js/header';
+import './assets/js/footer';
 import './assets/js/parallax-img';
 import './assets/js/main-screen';
 import './assets/js/unikalny-projects';
@@ -85,7 +85,6 @@ import './assets/js/gallery-slider';
 import './assets/js/video';
 import './assets/js/inputs';
 import './assets/js/anchors';
-import './assets/js/popup';
 import './assets/js/mobile-menu';
 import './assets/js/advantages';
 import './assets/js/our-projects';
