@@ -16,12 +16,11 @@ html(lang="ru")
 
   body(id=pageClass)
     include ../includes/header
-    div#scrollbar
-      main
-        block content
-      include ../includes/footer
+    main#scrollbar
+      block content
+      div.footer__space
+    include ../includes/footer
     include ../includes/mobile-menu
-    include ../includes/popup
     include ../includes/preloader
     block script
       script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')

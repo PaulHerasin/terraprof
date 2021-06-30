@@ -55,6 +55,7 @@
 		>div {
 			position: relative;
 			padding-bottom: 65.92%;
+			transition: 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) transform;
 
 			img {
 				position: absolute;
@@ -67,7 +68,7 @@
 		}
 
 		&:hover {
-			img {
+			>div {
 				transform: scale(1.08);
 			}
 		}

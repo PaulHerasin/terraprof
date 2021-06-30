@@ -15,7 +15,7 @@
 	}
 
 	&__wrap {
-		max-width: 121.5rem;
+		max-width: 140rem;
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
@@ -32,6 +32,13 @@
 
 		@media screen and (max-width: $large_tablet) {
 			width: 100%;
+		}
+
+		&+.advantages__item {
+			@media screen and (max-width:$large_tablet) {
+				margin-top: 4rem;
+			}
+
 		}
 
 		&-top {
@@ -115,20 +122,20 @@
 			}
 		}
 
-		&--2 {
-			// margin-top: 20rem;
+		// &--2 {
+		// 	// margin-top: 20rem;
 
-			@media screen and (max-width: $large_tablet) {
-				margin-top: 4rem;
-			}
-		}
+		// 	@media screen and (max-width: $large_tablet) {
+		// 		margin-top: 4rem;
+		// 	}
+		// }
 
-		&--3 {
-			// margin-top: 5rem;
+		// &--3 {
+		// 	// margin-top: 5rem;
 
-			@media screen and (max-width: $large_tablet) {
-				margin-top: 4rem;
-			}
-		}
+		// 	@media screen and (max-width: $large_tablet) {
+		// 		margin-top: 4rem;
+		// 	}
+		// }
 	}
 }
