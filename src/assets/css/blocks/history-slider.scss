@@ -1,15 +1,6 @@
 .history-slider {
     position: relative;
 
-    &__item {
-        &--reverse {
-            @media screen and (max-width:$large_tablet) {
-                display: flex;
-                flex-direction: column-reverse;
-            }
-        }
-    }
-
     &__line {
         height: 1px;
         background: linear-gradient(0deg, rgba(196, 196, 196, 0.5), rgba(196, 196, 196, 0.5)), rgba(196, 196, 196, 0.5);

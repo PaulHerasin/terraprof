@@ -25,6 +25,10 @@
                 }
             }
 
+            .mobile-menu__socials & {
+                fill: $primary-c;
+            }
+
         }
 
         &:hover {
@@ -33,6 +37,10 @@
 
                 .contact__info & {
                     fill: #323841;
+                }
+
+                .mobile-menu__socials & {
+                    fill: $secondary-c;
                 }
             }
         }
