@@ -23,7 +23,6 @@ if (document.querySelector('.projects-slider')) {
     gsap.fromTo(".projects-slider .swiper-slide-active .projects-slider__img-small", {
       y: "50%",
       duration: 0,
-      opacity: 0
     }, {
       scrollTrigger: {
         trigger: ".projects-slider",
@@ -31,28 +30,23 @@ if (document.querySelector('.projects-slider')) {
         end: "top 10%",
         scrub: 0.5
       },
-      opacity: 1,
       y: "0%",
       ease: "none"
     })
-    // gsap.to(".projects-slider .swiper-slide .projects-slider__img img", {
-    //   scrollTrigger: {
-    //     trigger: ".projects-slider .swiper-slide .projects-slider__img",
-    //     start: "top bottom",
-    //     end: "bottom top",
-    //     scrub: 0.5
-    //   },
-    //   y: "10%",
-    //   ease: "none"
-    // })
   }
 
   const sliderDefaul = () => {
+    gsap.to([".swiper-slide-next .projects-slider__img-small", ".swiper-slide-prev .projects-slider__img-small"], {
+      y: "100%",
+      duration: 2.5,
+    })
+
     gsap.to(".swiper-slide-active .projects-slider__img-small", {
       y: "100%",
-      opacity: 0,
+      opacity: 1,
       duration: 0,
     })
+
     gsap.to(".swiper-slide-active .projects-slider__object .oh", {
       y: "100%",
       opacity: 0,
@@ -63,8 +57,7 @@ if (document.querySelector('.projects-slider')) {
   const sliderChange = () => {
     gsap.to(".swiper-slide-active .projects-slider__img-small", {
       y: "0%",
-      opacity: 1,
-      duration: 1,
+      duration: 2.5,
     })
 
     gsap.to(".swiper-slide-active .projects-slider__object .oh", {
