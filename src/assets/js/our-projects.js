@@ -15,7 +15,7 @@ export const OurProjects = (timeDelay) => {
       document.querySelectorAll(".our-projects .our-projects__box").forEach(element => {
         element.addEventListener("mouseover", function () {
           gsap.to(element, {
-            scale: 0.9
+            scale: 0.95
           })
         })
         element.addEventListener("mouseout", function () {
