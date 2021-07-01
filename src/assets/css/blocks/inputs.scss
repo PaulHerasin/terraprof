@@ -97,6 +97,7 @@
         }
 
         &:focus+.inputs__label .inputs__content,
+        &[type='tel']:hover+.inputs__label .inputs__content,
         &:valid+.inputs__label .inputs__content,
         &:invalid.inputs__field--invalid+.inputs__label .inputs__content {
             top: 0;
