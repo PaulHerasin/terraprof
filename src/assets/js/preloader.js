@@ -49,9 +49,6 @@ const preloaderShow = () => {
     y: "-100%",
     duration: 0.75,
     delay: 2.75,
-    onComplete: () => {
-      document.querySelector(".preloader").style.display = "none"
-    }
   })
 }
 
