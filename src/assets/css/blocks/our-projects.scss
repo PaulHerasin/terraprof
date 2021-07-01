@@ -68,8 +68,10 @@
 		width: 100%;
 		position: relative;
 
-		> div {
+		>div {
 			position: relative;
+			padding-bottom: 65.96%;
+
 			transition: 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) transform;
 
 			img {
@@ -109,8 +111,7 @@
 		cursor: pointer;
 		display: block;
 
-		@media screen and (max-width: $large_tablet) {
-		}
+		@media screen and (max-width: $large_tablet) {}
 
 		&:hover {
 			.our-projects__object {
@@ -118,7 +119,7 @@
 			}
 
 			.our-projects__img {
-				> div {
+				>div {
 					transform: scale(1.08);
 				}
 			}
@@ -126,10 +127,55 @@
 
 		&--center {
 			margin: 0 auto;
+			width: 90%;
+
+			@media screen and (max-width:$large_tablet) {
+				width: 100%;
+			}
+
+			.our-projects__img {
+				>div {
+					padding-bottom: 73.3%;
+
+					@media screen and (max-width:$large_tablet) {
+						padding-bottom: 65.96%;
+					}
+				}
+			}
 		}
 
 		&--right {
 			margin-left: auto;
+			width: 90%;
+
+			@media screen and (max-width:$large_tablet) {
+				width: 100%;
+			}
+
+			.our-projects__img {
+				>div {
+					padding-bottom: 79.8% !important;
+
+					@media screen and (max-width:$large_tablet) {
+						padding-bottom: 65.96% !important;
+					}
+				}
+			}
+		}
+
+		&--left {
+			margin-right: auto;
+			width: 90%;
+
+			.our-projects__img {
+				>div {
+					padding-bottom: 79.8% !important;
+
+					@media screen and (max-width:$large_tablet) {
+						padding-bottom: 65.96% !important;
+					}
+				}
+			}
 		}
 
 		&--52 {
@@ -142,7 +188,7 @@
 			}
 
 			.our-projects__img {
-				> div {
+				>div {
 					padding-bottom: 100.96%;
 				}
 			}
@@ -152,7 +198,7 @@
 			max-width: 56rem;
 
 			.our-projects__img {
-				> div {
+				>div {
 					padding-bottom: 114.28%;
 
 					@media screen and (max-width: $large_tablet) {
@@ -172,7 +218,7 @@
 			}
 
 			.our-projects__img {
-				> div {
+				>div {
 					padding-bottom: 89.43%;
 
 					@media screen and (max-width: $large_tablet) {
@@ -182,15 +228,15 @@
 			}
 		}
 
-		&--63 {
-			max-width: 90.6%;
+		// &--63 {
+		// 	max-width: 90.6%;
 
-			.our-projects__img {
-				> div {
-					padding-bottom: 74.6%;
-				}
-			}
-		}
+		// 	.our-projects__img {
+		// 		>div {
+		// 			padding-bottom: 74.6%;
+		// 		}
+		// 	}
+		// }
 
 		&--66 {
 			max-width: 66rem;
@@ -200,7 +246,7 @@
 			}
 
 			.our-projects__img {
-				> div {
+				>div {
 					padding-bottom: 120.9%;
 
 					@media screen and (max-width: $large_tablet) {
@@ -210,25 +256,25 @@
 			}
 		}
 
-		&--68 {
-			max-width: 68rem;
+		// &--68 {
+		// 	max-width: 68rem;
 
-			.our-projects__img {
-				> div {
-					padding-bottom: 66.47%;
-				}
-			}
-		}
+		// 	.our-projects__img {
+		// 		>div {
+		// 			padding-bottom: 66.47%;
+		// 		}
+		// 	}
+		// }
 
-		&--100 {
-			max-width: 100%;
+		// &--100 {
+		// 	max-width: 100%;
 
-			.our-projects__img {
-				> div {
-					padding-bottom: 65.96%;
-				}
-			}
-		}
+		// 	.our-projects__img {
+		// 		>div {
+		// 			padding-bottom: 65.96%;
+		// 		}
+		// 	}
+		// }
 	}
 
 	&__btn {
