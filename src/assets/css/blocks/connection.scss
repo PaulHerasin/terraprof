@@ -1,97 +1,113 @@
 .connection {
-    padding: 18rem 0;
-    position: relative;
+	position: relative;
 
-    @media screen and (max-width:$large_tablet) {
-        padding: 10rem 0;
-    }
+	&__wrap {
+		padding: 18rem 0;
+		position: relative;
+		overflow: hidden;
 
-    &__line {
-        width: 21%;
-        height: 30rem;
-        background-image: url('~img/svg/connection-line.svg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: absolute;
-        right: 2%;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+		@media screen and (max-width: $large_tablet) {
+			padding: 10rem 0;
+		}
+	}
 
-    &__bg {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 5%;
-    }
+	&__line {
+		width: 21%;
+		height: 30rem;
+		background-image: url('~img/svg/connection-line.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: absolute;
+		right: 2%;
+		top: 50%;
+		transform: translateY(-50%);
+	}
 
-    &__subtitle {
-        text-align: left;
-        margin-bottom: 3rem;
-        font-weight: 200;
-        font-size: 7.2rem;
-        letter-spacing: -0.04em;
-        font-family: $secondary-f;
-        color: $primary-c;
+	&__bg-white {
+		position: absolute;
+		left: 0;
+		top: 0%;
+		width: 100%;
+		height: 100%;
+		opacity: 0.95;
+		background-color: #fff;
+		z-index: -1;
+	}
 
-        @media screen and (max-width:$large_tablet) {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-        }
-    }
+	&__bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -2;
+	}
 
-    &__title {
-        text-align: center;
+	&__subtitle {
+		text-align: left;
+		margin-bottom: 3rem;
+		font-weight: 200;
+		font-size: 7.2rem;
+		letter-spacing: -0.04em;
+		font-family: $secondary-f;
+		color: $primary-c;
 
-        .simple-title {
-            font-weight: 300;
-            transition: color .5s;
-            color: $danger-light;
+		@media screen and (max-width: $large_tablet) {
+			font-size: 4rem;
+			margin-bottom: 1.5rem;
+		}
+	}
 
-            @media screen and (max-width:$large_tablet) {
-                font-size: 3rem;
-            }
+	&__title {
+		text-align: center;
 
-            &::before {
-                display: none;
-            }
+		.simple-title {
+			font-weight: 300;
+			transition: color 0.5s;
+			color: $danger-light;
 
-            &::after {
-                content: '';
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                right: calc(100% + 3.5rem);
-                width: 5.6rem;
-                height: 5.6rem;
-                background-image: url("~img/svg/header-arrow.svg");
-                background-repeat: no-repeat;
-                background-size: contain;
-                opacity: 0;
-                visibility: hidden;
-                transition: opacity .5s, visibility .5s;
-                pointer-events: none;
+			@media screen and (max-width: $large_tablet) {
+				font-size: 3rem;
+			}
 
-                @media screen and (max-width:$large_tablet) {
-                    width: 2rem;
-                    height: 2rem;
-                    right: calc(100% + 1.5rem);
-                    opacity: 1;
-                    visibility: visible;
-                }
-            }
+			&::before {
+				display: none;
+			}
 
-            &:hover {
-                color: $danger-light;
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: calc(100% + 3.5rem);
+				width: 5.6rem;
+				height: 5.6rem;
+				background-image: url('~img/svg/header-arrow.svg');
+				background-repeat: no-repeat;
+				background-size: contain;
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 0.5s, visibility 0.5s;
+				pointer-events: none;
 
-                &::after {
-                    opacity: 1;
-                    visibility: visible;
-                }
-            }
-        }
-    }
+				@media screen and (max-width: $large_tablet) {
+					width: 2rem;
+					height: 2rem;
+					right: calc(100% + 1.5rem);
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+
+			&:hover {
+				color: $danger-light;
+
+				&::after {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
 }

@@ -5,7 +5,7 @@
 //   }, {
 //     scrollTrigger: {
 //       trigger: section.parentElement,
-//       top: "bottom bottom",
+//       start: "bottom bottom",
 //       end: "bottom top",
 //       scrub: 0.5
 //     },
@@ -23,7 +23,7 @@
 //   }, {
 //     scrollTrigger: {
 //       trigger: section.parentElement,
-//       top: "80% bottom",
+//       start: "80% bottom",
 //       end: "bottom top",
 //       toggleActions: "play reverse resume reset",
 //     },

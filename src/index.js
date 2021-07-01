@@ -1,6 +1,8 @@
 gsap.registerPlugin(ScrollTrigger);
 import './assets/js/const';
 import './assets/js/scrollbarFix';
+import './assets/js/preloader';
+import './assets/css/blocks/preloader.scss';
 import './assets/css/normalize.scss';
 import './assets/css/main.scss';
 
@@ -87,4 +89,16 @@ import './assets/js/inputs';
 import './assets/js/anchors';
 import './assets/js/mobile-menu';
 import './assets/js/advantages';
+import './assets/js/advantages-video';
 import './assets/js/our-projects';
+import './assets/js/services';
+import './assets/js/connection';
+import './assets/js/about';
+import './assets/js/other-projects';
+import './assets/js/library';
+import './assets/js/information-object';
+import './assets/js/gallery';
+import './assets/js/service-name';
+import './assets/js/process-robots';
+import './assets/js/types-robot';
+import './assets/js/objects';

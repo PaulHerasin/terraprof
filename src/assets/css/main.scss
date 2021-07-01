@@ -9,7 +9,7 @@
 	overflow: hidden;
 }
 
-main {
+#scrollbar {
 	overflow: hidden !important;
 
 	&[data-scrollbar] {
@@ -24,12 +24,10 @@ main {
 			}
 		}
 	}
+}
 
-
-
-	.pin-spacer {
-		z-index: 1;
-	}
+.pin-spacer {
+	z-index: 1;
 }
 
 img {
@@ -144,6 +142,10 @@ h4 {
 	font-size: 10.4rem;
 	line-height: 92%;
 	display: inline-block;
+
+	@media screen and (min-width: $large_tablet) {
+		line-height: 1.15;
+	}
 
 	&::before {
 		content: '';
