@@ -9,6 +9,7 @@ import './assets/css/main.scss';
 //BLOCKS 
 
 import './assets/css/blocks/btn.scss';
+import './assets/css/blocks/popup.scss';
 import './assets/css/blocks/title-line.scss';
 import './assets/css/blocks/inputs.scss';
 import './assets/css/blocks/video.scss';
@@ -73,6 +74,7 @@ import './assets/css/blocks/contact.scss';
 
 // JS  
 import './assets/js/header';
+import './assets/js/popup';
 import './assets/js/footer';
 import './assets/js/parallax-img';
 import './assets/js/main-screen';
