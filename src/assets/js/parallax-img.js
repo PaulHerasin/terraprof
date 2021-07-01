@@ -1,11 +1,12 @@
-gsap.utils.toArray(".img-parallax img").forEach((section) => {
-  gsap.fromTo(section, {
+document.querySelectorAll(".img-parallax").forEach((section) => {
+  gsap.fromTo(section.querySelector("img"), {
     y: "-10%",
-    scale: 1.2
+    scale: 1.2,
+    duration: 0,
   }, {
     scrollTrigger: {
-      trigger: section.parentElement,
-      top: "top bottom",
+      trigger: section,
+      start: "top bottom",
       end: "bottom top",
       scrub: 0.5
     },
@@ -13,3 +14,4 @@ gsap.utils.toArray(".img-parallax img").forEach((section) => {
     ease: "none"
   });
 });
+

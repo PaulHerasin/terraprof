@@ -3,6 +3,17 @@ import { MainScreen } from "./main-screen"
 import { UnikalnyProjects } from "./unikalny-projects"
 import { OurProjects } from "./our-projects"
 import { Advantages } from "./advantages"
+import { AdvantagesVideo } from "./advantages-video"
+import { About } from "./about"
+import { Services } from "./services"
+import { OtherProjects } from "./other-projects"
+import { Library } from "./library"
+import { InformationObject } from "./information-object"
+import { Gallery } from "./gallery"
+import { ServiceName } from "./service-name"
+import { ProcessRobots } from "./process-robots"
+import { TypesRobot } from "./types-robot"
+import { Objects } from "./objects"
 
 if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
   window.scrollbar = Scrollbar.init(document.querySelector('#scrollbar'), {
@@ -27,17 +38,24 @@ if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
 }
 
 
-let addScrollTrigger = () => {
-  MainScreen(2)
+export const StartProject = (timeDelay) => {
+  MainScreen(timeDelay)
+  About(timeDelay)
+  Services(timeDelay)
+  Library(timeDelay)
+  Objects(timeDelay)
   setTimeout(function () {
     UnikalnyProjects()
     Advantages()
     OurProjects()
+    AdvantagesVideo()
+    OtherProjects()
+    InformationObject()
+    Gallery()
+    ServiceName()
+    ProcessRobots()
+    TypesRobot()
   }, 1000)
 
   ScrollTrigger.refresh()
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-  addScrollTrigger()
-});

@@ -1,8 +1,8 @@
 if (document.querySelector('.projects-slider')) {
   const projectsSliderActive = () => {
     gsap.utils.toArray(
-      [".projects-slider .swiper-slide .projects-slider__img img",
-        ".projects-slider .swiper-slide .projects-slider__img-small img"
+      [".projects-slider .swiper-slide-active .projects-slider__img img",
+        ".projects-slider .swiper-slide-active .projects-slider__img-small img"
       ]).forEach((section) => {
         gsap.fromTo(section, {
           y: "-10%",
@@ -11,7 +11,7 @@ if (document.querySelector('.projects-slider')) {
         }, {
           scrollTrigger: {
             trigger: section.parentElement,
-            top: "top bottom",
+            start: "top bottom",
             end: "bottom top",
             scrub: 0.5
           },
@@ -20,32 +20,61 @@ if (document.querySelector('.projects-slider')) {
         });
       });
 
-    gsap.fromTo(".projects-slider .swiper-slide .projects-slider__img-small", {
+    gsap.fromTo(".projects-slider .swiper-slide-active .projects-slider__img-small", {
       y: "50%",
       duration: 0,
-      opacity: 0
     }, {
       scrollTrigger: {
         trigger: ".projects-slider",
-        top: "top bottom",
-        end: "15% center",
+        start: "top bottom",
+        end: "top 10%",
         scrub: 0.5
       },
-      opacity: 1,
       y: "0%",
       ease: "none"
     })
-    //   gsap.to(".projects-slider .swiper-slide .projects-slider__img img", {
-    //     scrollTrigger: {
-    //       trigger: ".projects-slider .swiper-slide .projects-slider__img",
-    //       top: "top bottom",
-    //       end: "bottom top",
-    //       scrub: 0.5
-    //     },
-    //     y: "10%",
-    //     ease: "none"
-    //   })
   }
+
+  const sliderDefaul = () => {
+    gsap.to([".swiper-slide-next .projects-slider__img-small", ".swiper-slide-prev .projects-slider__img-small"], {
+      y: "100%",
+      duration: 2.5,
+    })
+
+    gsap.to(".swiper-slide-active .projects-slider__img-small", {
+      y: "100%",
+      opacity: 1,
+      duration: 0,
+    })
+
+    gsap.to(".swiper-slide-active .projects-slider__object .oh", {
+      y: "100%",
+      opacity: 0,
+      duration: 0,
+    })
+  }
+
+  const sliderChange = () => {
+    gsap.to(".swiper-slide-active .projects-slider__img-small", {
+      y: "0%",
+      duration: 2.5,
+    })
+
+    gsap.to(".swiper-slide-active .projects-slider__object .oh", {
+      y: "0%",
+      opacity: 1,
+      duration: 0.75,
+      stagger: {
+        each: 0.35
+      },
+      // delay: 0.5,
+      scrollTrigger: {
+        trigger: ".swiper-slide-active .projects-slider__object",
+        start: "top bottom",
+      },
+    })
+  }
+
 
   var swiper = new Swiper('.projects-slider .swiper-container', {
     slidesPerView: 1,
@@ -78,7 +107,12 @@ if (document.querySelector('.projects-slider')) {
           this.update();
         }.bind(this), 500);
       },
+      slideChangeTransitionStart: function () {
+        sliderDefaul()
+        setTimeout(function () {
+          sliderChange()
+        }, 1000)
+      },
     }
-    ///
   });
 }
