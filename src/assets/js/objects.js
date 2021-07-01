@@ -28,13 +28,13 @@ export const Objects = (timeDelay) => {
       })
 
 
-      gsap.fromTo(".objects__list-link", {
+      gsap.fromTo(".objects__list-wrap", {
         opacity: 0,
-        y: "100%",
+        y: 50,
         duration: 0
       }, {
         opacity: 1,
-        y: "0%",
+        y: 0,
         duration: 0.75,
         delay: timeDelay + 1,
       })

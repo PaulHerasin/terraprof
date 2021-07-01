@@ -18,6 +18,15 @@ export const About = (timeDelay) => {
         delay: timeDelay,
       })
 
+      gsap.fromTo(".about .title-line .line", {
+        opacity: 0,
+        duration: 0,
+      }, {
+        opacity: 1,
+        duration: 2,
+        delay: timeDelay + 1.5,
+      })
+
       gsap.to([".about .about__left .oh", ".about .about__left-text"], {
         scale: 1,
         opacity: 1,
