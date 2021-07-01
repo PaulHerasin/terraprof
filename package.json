@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "gifsicle": "^5.2.0",
-    "gsap-plugin": "^5.0.6"
+    "gsap-plugin": "^5.0.6",
+    "inputmasks": "^5.0.4"
   }
 }
