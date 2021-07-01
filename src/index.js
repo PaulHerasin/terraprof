@@ -1,11 +1,10 @@
 gsap.registerPlugin(ScrollTrigger);
 import './assets/js/const';
-import './assets/js/scrollbarFix';
 import './assets/js/preloader';
+import './assets/js/scrollbarFix';
 import './assets/css/blocks/preloader.scss';
 import './assets/css/normalize.scss';
 import './assets/css/main.scss';
-
 
 //BLOCKS 
 
@@ -102,3 +101,4 @@ import './assets/js/service-name';
 import './assets/js/process-robots';
 import './assets/js/types-robot';
 import './assets/js/objects';
+import './assets/js/map';

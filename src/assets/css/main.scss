@@ -143,6 +143,21 @@ h4 {
 	line-height: 92%;
 	display: inline-block;
 
+	&.oh {
+		padding-bottom: 2.8rem;
+		&::before {
+			bottom: 0rem;
+
+			@media screen and (max-width: $large_tablet) {
+				height: 0.4rem;
+			}
+		}
+
+		@media screen and (max-width: $large_tablet) {
+			padding-bottom: 1.4rem;
+		}
+	}
+
 	@media screen and (min-width: $large_tablet) {
 		line-height: 1.15;
 	}
