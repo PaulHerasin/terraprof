@@ -36,56 +36,60 @@ export const Services = (timeDelay) => {
         }
       })
 
+      setTimeout(function () {
+        gsap.fromTo(".services .services__box .oh", {
+          y: "100%",
+          duration: 0,
+          opacity: 0,
+        }, {
+          y: "0%",
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".services .services__box .oh",
+            start: "top bottom",
+            end: "bottom bottom",
+          },
+        })
+      }, 1000);
 
+      if (document.querySelector(".services")) {
+        document.querySelectorAll('.services .services__box').forEach(element => {
 
-      document.querySelectorAll('.services .services__box').forEach(element => {
-        setTimeout(function () {
-          gsap.fromTo(element.querySelector(".oh"), {
-            y: "100%",
-            duration: 0,
-            opacity: 0,
-          }, {
-            y: "0%",
-            opacity: 1,
-            scrollTrigger: {
-              trigger: element.querySelector(".oh"),
-              start: "top bottom",
-              end: "bottom bottom",
-            },
-          })
-        }, timeDelay * 1000)
+          element.addEventListener("click", function (e) {
 
-        element.addEventListener("click", function (e) {
-
-          const hidePage = () => {
-            if (document.querySelector(".services__hide-page")) {
-              document.querySelector(".services__hide-page").remove()
+            const servicesHidePage = () => {
+              if (document.querySelector(".services__hide-page")) {
+                document.querySelector(".services__hide-page").remove()
+              }
+              document.querySelector(".preloader").remove()
+              let div = document.createElement('img');
+              div.classList.add("services__hide-page")
+              div.setAttribute("src", element.querySelector("img").getAttribute("src"))
+              document.body.append(div)
+              gsap.to(".services__hide-page", {
+                scale: 1,
+                duration: 1,
+                delay: 0.5,
+                ease: "none"
+              })
             }
-            document.querySelector(".preloader").remove()
-            let div = document.createElement('img');
-            div.classList.add("services__hide-page")
-            div.setAttribute("src", element.querySelector("img").getAttribute("src"))
-            document.body.append(div)
-            gsap.to(".services__hide-page", {
-              scale: 1,
-              duration: 1
-            })
-          }
 
-          $(document).on(
-            'click',
-            "a:not([href^='#']):not([href^='tel']):not([href^='']):not(.anchors a):not(.single-anchors):not(.fancybox):not([target='_blank'])",
-            function (e) {
-              e.preventDefault();
-              hidePage();
-              var self = this;
-              setTimeout(function () {
-                window.location.href = $(self).attr('href');
-              }, 2000);
-            }
-          );
-        });
-      })
+            $(document).on(
+              'click',
+              "a:not([href^='#']):not([href^='tel']):not([href^='']):not(.anchors a):not(.single-anchors):not(.fancybox):not([target='_blank'])",
+              function (e) {
+                e.preventDefault();
+                servicesHidePage();
+                var self = this;
+                setTimeout(function () {
+                  window.location.href = $(self).attr('href');
+                }, 1500);
+              }
+            );
+          });
+        })
+      }
     }
   }
 }
+
