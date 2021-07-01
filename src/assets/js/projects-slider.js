@@ -37,8 +37,9 @@ if (document.querySelector('.projects-slider')) {
 
   const sliderDefaul = () => {
     gsap.to([".swiper-slide-next .projects-slider__img-small", ".swiper-slide-prev .projects-slider__img-small"], {
-      y: "100%",
-      duration: 2.5,
+      opacity: 0,
+      duration: 1,
+      y: "0%"
     })
 
     gsap.to(".swiper-slide-active .projects-slider__img-small", {

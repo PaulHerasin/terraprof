@@ -14,7 +14,7 @@ export const TypesRobot = (timeDelay) => {
           start: "top bottom",
         },
       })
-      gsap.fromTo(".types-robot .types-robot__title .oh", {
+      gsap.fromTo(".types-robot .types-robot__title", {
         y: 10,
         duration: 0,
       }, {
