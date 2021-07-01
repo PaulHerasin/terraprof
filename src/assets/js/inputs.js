@@ -16,20 +16,3 @@ $('form button[type="submit"]').on('click', function () {
     $(this).closest('form').find('.inputs__checkbox-input').addClass('inputs__field--invalid');
     $(this).closest('form').find('input.inputs__field').addClass('inputs__field--invalid');
 });
-
-// Ajax отправки данных на сервер;
-
-$('form').on('submit', function (e) {
-    e.preventDefault();
-
-    close_popup('form');
-    show_popup('thank');
-    // e.preventDefault();
-    // $.ajax({
-    //     type: 'post',
-    //     url: '../send.php',
-    //     data: $(this).serialize(),
-    //     success:function(d) {
-    //     }
-    // });
-});
