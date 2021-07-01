@@ -63,14 +63,14 @@ export const AdvantagesVideo = (timeDelay) => {
       })
 
       gsap.fromTo(".advantages-video .advantages-video__item-text", {
-        y: "100%",
+        y: 70,
         duration: 0,
         opacity: 0,
       }, {
-        y: "0%",
+        y: 0,
         opacity: 1,
-        delay: 1,
-        duration: 0.75,
+        delay: 0.75,
+        duration: 1,
         scrollTrigger: {
           trigger: ".advantages-video .advantages-video__item",
           start: "top bottom",
