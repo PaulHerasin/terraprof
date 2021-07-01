@@ -1,6 +1,10 @@
 .library {
 	padding-bottom: calc(23rem + 7.5rem);
 
+	.pin-spacer {
+		z-index: 0;
+	}
+
 	@media screen and (min-width: $large_tablet) {
 		padding-bottom: 23rem;
 	}

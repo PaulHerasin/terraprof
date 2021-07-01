@@ -18,7 +18,7 @@ export const Services = (timeDelay) => {
         delay: timeDelay
       })
 
-      gsap.from(".services .services__columns-top", {
+      gsap.from([".services .services__columns-top", ".services .services__left .services__box:nth-of-type(1)"], {
         y: 100,
         opacity: 0,
         duration: 0.75,
@@ -70,7 +70,6 @@ export const Services = (timeDelay) => {
                 scale: 1,
                 duration: 1,
                 delay: 0.5,
-                ease: "none"
               })
             }
 

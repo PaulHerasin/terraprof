@@ -10,7 +10,7 @@ if (document.querySelector(".connection")) {
     y: 100
   })
 
-  document.querySelector(".connection .connection__title").addEventListener("click", function (e) {
+  document.querySelector(".connection .connection__wrap").addEventListener("click", function (e) {
     gsap.to(".connection .contact", {
       css: {
         display: "block"

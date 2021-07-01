@@ -22,6 +22,26 @@ export const Library = (timeDelay) => {
         delay: timeDelay,
       })
 
+      gsap.fromTo(".library .line", {
+        opacity: 0,
+        duration: 0,
+      }, {
+        opacity: 1,
+        duration: 2,
+        delay: timeDelay + 1.5,
+      })
+
+      gsap.fromTo(".library .library__left", {
+        opacity: 0,
+        y: 100,
+        duration: 0
+      }, {
+        y: 0,
+        opacity: 1,
+        duration: 0.75,
+        delay: timeDelay + 0.5,
+      })
+
       gsap.fromTo(".library .library__content .library__subtitle", {
         opacity: 0,
         duration: 0

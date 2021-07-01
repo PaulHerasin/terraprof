@@ -1,15 +1,15 @@
 gsap.registerPlugin(ScrollTrigger);
 import './assets/js/const';
-import './assets/js/scrollbarFix';
 import './assets/js/preloader';
+import './assets/js/scrollbarFix';
 import './assets/css/blocks/preloader.scss';
 import './assets/css/normalize.scss';
 import './assets/css/main.scss';
 
-
 //BLOCKS 
 
 import './assets/css/blocks/btn.scss';
+import './assets/css/blocks/popup.scss';
 import './assets/css/blocks/title-line.scss';
 import './assets/css/blocks/inputs.scss';
 import './assets/css/blocks/video.scss';
@@ -74,6 +74,7 @@ import './assets/css/blocks/contact.scss';
 
 // JS  
 import './assets/js/header';
+import './assets/js/popup';
 import './assets/js/footer';
 import './assets/js/parallax-img';
 import './assets/js/main-screen';
@@ -102,3 +103,4 @@ import './assets/js/service-name';
 import './assets/js/process-robots';
 import './assets/js/types-robot';
 import './assets/js/objects';
+import './assets/js/map';
