@@ -104,4 +104,4 @@ import './assets/js/process-robots';
 import './assets/js/types-robot';
 import './assets/js/objects';
 import './assets/js/map';
-import './assets/js/inputs-mask';
+// import './assets/js/inputs-mask';
