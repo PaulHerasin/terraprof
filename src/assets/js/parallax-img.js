@@ -1,5 +1,5 @@
-document.querySelectorAll(".img-parallax").forEach((section) => {
-  gsap.fromTo(section.querySelector("img"), {
+document.querySelectorAll(".img-parallax-wrap").forEach((section) => {
+  gsap.fromTo(section.querySelector(".img-parallax"), {
     y: "-10%",
     scale: 1.2,
     duration: 0,
