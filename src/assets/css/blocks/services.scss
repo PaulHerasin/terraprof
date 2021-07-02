@@ -5,11 +5,16 @@
 
 	&__hide-page {
 		position: fixed;
-		width: 100vw;
-		height: 100vh;
 		z-index: 999999;
 		object-fit: cover;
-		transform: scale(0);
+	}
+
+	&__hide-page--active {
+		top: 0px !important;
+		left: 0px !important;
+		height: 100vh !important;
+		width: 100vw !important;
+		transition: 2s;
 	}
 
 	@media screen and (max-width: $large_tablet) {
