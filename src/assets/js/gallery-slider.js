@@ -1,7 +1,7 @@
 if (document.querySelector('.gallery-slider')) {
 
   document.querySelectorAll(".gallery-img-parallax").forEach((section) => {
-    gsap.fromTo(section.querySelector(".gallery-img-parallax > div"), {
+    gsap.fromTo(section.querySelector(".gallery-slider__img"), {
       y: "-10%",
       scale: 1.2,
       duration: 0,
