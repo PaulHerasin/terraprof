@@ -43,8 +43,8 @@ if (document.querySelector('.projects-slider')) {
     })
 
     gsap.to(".swiper-slide-active .projects-slider__img-small", {
-      y: "100%",
-      opacity: 1,
+      y: 200,
+      opacity: 0,
       duration: 0,
     })
 
@@ -57,8 +57,9 @@ if (document.querySelector('.projects-slider')) {
 
   const sliderChange = () => {
     gsap.to(".swiper-slide-active .projects-slider__img-small", {
-      y: "0%",
+      y: 0,
       duration: 2.5,
+      opacity: 1,
     })
 
     gsap.to(".swiper-slide-active .projects-slider__object .oh", {
