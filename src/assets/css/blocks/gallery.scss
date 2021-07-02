@@ -5,6 +5,10 @@
         padding: 0 0 6rem;
     }
 
+    .line {
+        z-index: -1;
+    }
+
     &__content {
         padding-top: 20rem;
         padding-bottom: 7rem;
