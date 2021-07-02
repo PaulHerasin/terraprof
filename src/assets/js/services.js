@@ -40,7 +40,6 @@ export const Services = (timeDelay) => {
 
 
       setTimeout(function () {
-
         gsap.fromTo(".services .services__box .oh", {
           y: "100%",
           duration: 0,
@@ -66,7 +65,7 @@ export const Services = (timeDelay) => {
 
             let div = document.createElement('img');
             div.classList.add("services__hide-page")
-            div.setAttribute("src", element.querySelector("img").getAttribute("data-img-trans"))
+            div.setAttribute("src", element.querySelector("img").getAttribute("src"))
             document.body.append(div)
 
             gsap.to(".services__hide-page", {
