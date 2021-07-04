@@ -79,8 +79,11 @@ $(document).ready(function () {
       e.preventDefault();
       pageHide();
       var self = this;
+
       setTimeout(function () {
-        window.location.href = $(self).attr('href');
+        if (document.querySelector('.preloader')) {
+          window.location.href = $(self).attr('href');
+        }
       }, 1500);
     }
   );

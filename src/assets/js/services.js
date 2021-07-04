@@ -36,6 +36,9 @@ export const Services = (timeDelay) => {
         }
       })
 
+
+
+
       setTimeout(function () {
         gsap.fromTo(".services .services__box .oh", {
           y: "100%",
@@ -52,43 +55,101 @@ export const Services = (timeDelay) => {
         })
       }, 1000);
 
-      if (document.querySelector(".services")) {
-        document.querySelectorAll('.services .services__box').forEach(element => {
+      document.querySelectorAll('.services .services__box').forEach(element => {
 
-          element.addEventListener("click", function (e) {
+        element.addEventListener("click", function (e) {
+          // const servicesHidePage = () => {
 
-            const servicesHidePage = () => {
-              if (document.querySelector(".services__hide-page")) {
-                document.querySelector(".services__hide-page").remove()
-              }
-              document.querySelector(".preloader").remove()
-              let div = document.createElement('img');
-              div.classList.add("services__hide-page")
-              div.setAttribute("src", element.querySelector("img").getAttribute("src"))
-              document.body.append(div)
-              gsap.to(".services__hide-page", {
-                scale: 1,
-                duration: 1,
-                delay: 0.5,
-              })
+          //   let coords = element.getBoundingClientRect();
+          //   document.querySelector(".preloader").remove()
+
+          //   let div = document.createElement('img');
+          //   div.classList.add("services__hide-page")
+          //   div.setAttribute("src", element.querySelector("img").getAttribute("src"))
+          //   document.body.append(div)
+
+          //   gsap.to(".services__hide-page", {
+          //     css: {
+          //       top: coords.height / 2 + coords.y + "px",
+          //       left: coords.width / 2 + coords.x + "px",
+          //       yPercent: -50,
+          //       xPercent: -50,
+          //       scale: 0.1,
+          //       opacity: 0,
+          //     },
+          //     duration: 0,
+          //   })
+
+          //   gsap.to(".services__hide-page", {
+          //     opacity: 1,
+          //     duration: 0.3,
+          //   })
+
+          //   gsap.to(".services__hide-page", {
+          //     css: {
+          //       top: "0px",
+          //       left: "0px",
+          //       yPercent: 0,
+          //       xPercent: 0,
+          //       scale: 1,
+          //     },
+          //     duration: 1.3,
+          //   })
+          // }
+
+
+          const servicesHidePage = () => {
+
+            let coords = element.getBoundingClientRect();
+            document.querySelector(".preloader").remove()
+
+            let div = document.createElement('img');
+            div.classList.add("services__hide-page")
+            div.setAttribute("src", element.querySelector("img").getAttribute("src"))
+            document.body.append(div)
+
+            gsap.to(".services__hide-page", {
+              css: {
+                top: coords.y + "px",
+                left: coords.x + "px",
+                height: element.querySelector(".services__img > div").clientHeight,
+                width: element.querySelector(".services__img > div").clientWidth,
+              },
+              duration: 0,
+            })
+
+            setTimeout(function () {
+              div.classList.add("services__hide-page--active")
+            }, 100);
+
+            // gsap.to(".services__hide-page", {
+            //   css: {
+            //     top: "0px",
+            //     left: "0px",
+            //     height: "100vh",
+            //     width: "100vw",
+            //   },
+            //   duration: 1.5
+            // })
+          }
+
+          $(document).on(
+            'click',
+            "a:not([href^='#']):not([href^='tel']):not([href^='']):not(.anchors a):not(.single-anchors):not(.fancybox):not([target='_blank'])",
+            function (e) {
+              e.preventDefault();
+              servicesHidePage();
+              var self = this;
+              setTimeout(function () {
+                window.location.href = $(self).attr('href');
+              }, 2300);
             }
-
-            $(document).on(
-              'click',
-              "a:not([href^='#']):not([href^='tel']):not([href^='']):not(.anchors a):not(.single-anchors):not(.fancybox):not([target='_blank'])",
-              function (e) {
-                e.preventDefault();
-                servicesHidePage();
-                var self = this;
-                setTimeout(function () {
-                  window.location.href = $(self).attr('href');
-                }, 1500);
-              }
-            );
-          });
+          );
         })
-      }
+      });
     }
   }
 }
+
+
 

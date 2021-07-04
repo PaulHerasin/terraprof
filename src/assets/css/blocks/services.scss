@@ -6,13 +6,17 @@
 	&__hide-page {
 		position: fixed;
 		z-index: 999999;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
 		object-fit: cover;
-		object-position: center;
-		transform: scale(0);
+		border-radius: calc(16px);
+	}
+
+	&__hide-page--active {
+		top: 0px !important;
+		left: 0px !important;
+		height: 100vh !important;
+		width: 100vw !important;
+		border-radius: 0;
+		transition: 2s;
 	}
 
 	@media screen and (max-width: $large_tablet) {
@@ -153,7 +157,7 @@
 					opacity: 0;
 				}
 
-				>div {
+				> div {
 					transform: scale(1.08);
 				}
 			}
@@ -212,14 +216,16 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background: linear-gradient(180deg,
-					rgba(39, 36, 37, 0) 0%,
-					rgba(39, 36, 37, 0.4) 100%);
+			background: linear-gradient(
+				180deg,
+				rgba(39, 36, 37, 0) 0%,
+				rgba(39, 36, 37, 0.4) 100%
+			);
 			z-index: 2;
 			transition: opacity 0.5s;
 		}
 
-		>div {
+		> div {
 			position: relative;
 			padding-bottom: 133.82%;
 			transition: 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) transform;
@@ -241,7 +247,7 @@
 		&--pb67 {
 			max-width: 71rem;
 
-			>div {
+			> div {
 				padding-bottom: 67.6%;
 
 				@media screen and (max-width: $large_tablet) {
@@ -253,7 +259,7 @@
 		&--pb75 {
 			max-width: 40rem;
 
-			>div {
+			> div {
 				padding-bottom: 75%;
 
 				@media screen and (max-width: $large_tablet) {
@@ -263,7 +269,7 @@
 		}
 
 		&--pb101 {
-			>div {
+			> div {
 				padding-bottom: 101.33%;
 
 				@media screen and (max-width: $large_tablet) {
@@ -273,7 +279,7 @@
 		}
 
 		&--pb103 {
-			>div {
+			> div {
 				padding-bottom: 103.46%;
 
 				@media screen and (max-width: $large_tablet) {
@@ -283,7 +289,7 @@
 		}
 
 		&--pb200 {
-			>div {
+			> div {
 				padding-bottom: 200.26%;
 
 				@media screen and (max-width: $large_tablet) {

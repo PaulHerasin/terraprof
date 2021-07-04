@@ -2,9 +2,9 @@ export const InformationObject = (timeDelay) => {
   if (document.querySelector(".information-object")) {
     if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
 
-      gsap.to(".information-object .objects__scroll", {
+      gsap.to(".information-object .information-object__scroll", {
         scrollTrigger: {
-          trigger: ".information-object",
+          trigger: ".information-object .information-object__scroll",
           start: "top center",
           end: "bottom bottom",
           pin: ".information-object .information-object__scroll .scroll-down",
@@ -65,7 +65,7 @@ export const InformationObject = (timeDelay) => {
 
         if (index == 0) {
           informationObjectWrap.fromTo(element.querySelector(".information-object__left"), {
-            y: 300,
+            y: 200,
             duration: 0,
           }, {
             y: 0,
