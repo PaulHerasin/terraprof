@@ -1,4 +1,3 @@
-
 export const About = (timeDelay) => {
   if (document.querySelector(".about")) {
     if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
