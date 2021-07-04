@@ -69,6 +69,7 @@ import './assets/css/blocks/objects.scss';
 // CONTACT
 import './assets/css/blocks/map.scss';
 import './assets/css/blocks/contact.scss';
+import './assets/css/blocks/zoom.scss';
 
 
 
@@ -104,4 +105,5 @@ import './assets/js/process-robots';
 import './assets/js/types-robot';
 import './assets/js/objects';
 import './assets/js/map';
+import './assets/js/zoom';
 // import './assets/js/inputs-mask';
