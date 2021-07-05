@@ -81,6 +81,7 @@
 			bottom: -19rem;
 			z-index: 3;
 			overflow: hidden;
+			border-radius: calc(#{$br} * 4);
 
 			@media screen and (max-width: $large_tablet) {
 				display: none;
