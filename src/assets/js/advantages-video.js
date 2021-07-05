@@ -1,5 +1,30 @@
 export const AdvantagesVideo = (timeDelay) => {
   if (document.querySelector(".advantages-video")) {
+
+    gsap.to(".advantages-video .video__play", {
+      scrollTrigger: {
+        trigger: ".advantages-video__wrap",
+        start: "top bottom",
+        end: "bottom top",
+        onEnter: () => {
+          if (document.querySelector(".advantages-video .video__play--static")) {
+            document.querySelector(".advantages-video .video__play").classList.remove("video__play--static")
+          }
+        },
+        onEnterBack: () => {
+          if (document.querySelector(".advantages-video .video__play--static")) {
+            document.querySelector(".advantages-video .video__play").classList.remove("video__play--static")
+          }
+        },
+        onLeave: () => {
+          document.querySelector(".advantages-video .video__play").classList.add("video__play--static")
+        },
+        onLeaveBack: () => {
+          document.querySelector(".advantages-video .video__play").classList.add("video__play--static")
+        },
+      }
+    })
+
     if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
 
       gsap.to(".advantages-video__wrap", {

@@ -1,6 +1,29 @@
 
 export const Objects = (timeDelay) => {
   if (document.querySelector(".objects")) {
+    gsap.to(".objects .scroll-down", {
+      scrollTrigger: {
+        trigger: ".objects .objects__scroll",
+        start: "top bottom",
+        end: "bottom top",
+        onEnter: () => {
+          if (document.querySelector(".objects .scroll-down--static")) {
+            document.querySelector(".objects .scroll-down").classList.remove("scroll-down--static")
+          }
+        },
+        onEnterBack: () => {
+          if (document.querySelector(".objects .scroll-down--static")) {
+            document.querySelector(".objects .scroll-down").classList.remove("scroll-down--static")
+          }
+        },
+        onLeave: () => {
+          document.querySelector(".objects .scroll-down").classList.add("scroll-down--static")
+        },
+        onLeaveBack: () => {
+          document.querySelector(".objects .scroll-down").classList.add("scroll-down--static")
+        },
+      }
+    })
     if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
 
       gsap.fromTo(".objects__title .oh", {

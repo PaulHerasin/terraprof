@@ -14,7 +14,8 @@
 		transform: translateX(-50%);
 
 		@media screen and (min-width: $large_tablet) {
-			top: 16%;
+			padding-top: 15%;
+			top: 0%;
 		}
 
 		@media screen and (max-width: $large_desktop) {
@@ -74,7 +75,7 @@
 				max-width: 100%;
 				width: 100%;
 
-				>div {
+				> div {
 					padding-bottom: 83.01%;
 				}
 			}
@@ -127,7 +128,7 @@
 			width: calc(50% - 3.5rem);
 			margin-bottom: 5rem;
 
-			@media screen and (max-width:$large_tablet) {
+			@media screen and (max-width: $large_tablet) {
 				width: calc(50% - 1rem);
 				margin-bottom: 3rem;
 			}
@@ -190,7 +191,7 @@
 			margin-left: 0;
 		}
 
-		>div {
+		> div {
 			position: relative;
 			padding-bottom: 106.86%;
 

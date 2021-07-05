@@ -19,6 +19,15 @@ export const MainScreen = (timeDelay) => {
         delay: timeDelay,
       })
 
+      gsap.fromTo(".main-screen .line", {
+        opacity: 0,
+        duration: 0,
+      }, {
+        opacity: 1,
+        duration: 2,
+        delay: timeDelay + 1.5,
+      })
+
       ScrollTrigger.create({
         trigger: ".main-screen",
         start: 'top top',

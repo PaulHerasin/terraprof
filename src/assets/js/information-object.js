@@ -1,11 +1,35 @@
 export const InformationObject = (timeDelay) => {
   if (document.querySelector(".information-object")) {
+    gsap.to(".information-object .scroll-down", {
+      scrollTrigger: {
+        trigger: ".information-object .information-object__scroll",
+        start: "top bottom",
+        end: "bottom top",
+        onEnter: () => {
+          if (document.querySelector(".information-object .scroll-down--static")) {
+            document.querySelector(".information-object .scroll-down").classList.remove("scroll-down--static")
+          }
+        },
+        onEnterBack: () => {
+          if (document.querySelector(".information-object .scroll-down--static")) {
+            document.querySelector(".information-object .scroll-down").classList.remove("scroll-down--static")
+          }
+        },
+        onLeave: () => {
+          document.querySelector(".information-object .scroll-down").classList.add("scroll-down--static")
+        },
+        onLeaveBack: () => {
+          document.querySelector(".information-object .scroll-down").classList.add("scroll-down--static")
+        },
+      }
+    })
+
     if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
 
       gsap.to(".information-object .information-object__scroll", {
         scrollTrigger: {
           trigger: ".information-object .information-object__scroll",
-          start: "top center",
+          start: "top 10%",
           end: "bottom bottom",
           pin: ".information-object .information-object__scroll .scroll-down",
           pinSpacing: false,
