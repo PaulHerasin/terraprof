@@ -6,7 +6,11 @@
 	color: $danger-light;
 
 	// transition: all .5s;
-	&--static {}
+	&--static {
+		.scroll-down__line {
+			animation: none;
+		}
+	}
 
 	&__text {
 		writing-mode: vertical-rl;

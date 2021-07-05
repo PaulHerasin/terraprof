@@ -70,7 +70,9 @@
             }
         }
 
-        &--static {}
+        &--static {
+            animation: none !important;
+        }
 
         &--small {
             width: 7.2rem;
