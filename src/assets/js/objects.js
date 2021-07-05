@@ -39,6 +39,15 @@ export const Objects = (timeDelay) => {
         delay: timeDelay,
       })
 
+      gsap.fromTo(".objects .line", {
+        opacity: 0,
+        duration: 0,
+      }, {
+        opacity: 1,
+        duration: 2,
+        delay: timeDelay + 1.5,
+      })
+
       gsap.fromTo(".objects__filter", {
         opacity: 0,
         y: "100%",
