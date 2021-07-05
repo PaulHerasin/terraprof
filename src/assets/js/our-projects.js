@@ -1,5 +1,29 @@
 export const OurProjects = (timeDelay) => {
   if (document.querySelector(".our-projects")) {
+    gsap.to(".our-projects .scroll-down", {
+      scrollTrigger: {
+        trigger: ".our-projects .our-projects__scroll",
+        start: "top bottom",
+        end: "bottom top",
+        onEnter: () => {
+          if (document.querySelector(".our-projects .scroll-down--static")) {
+            document.querySelector(".our-projects .scroll-down").classList.remove("scroll-down--static")
+          }
+        },
+        onEnterBack: () => {
+          if (document.querySelector(".our-projects .scroll-down--static")) {
+            document.querySelector(".our-projects .scroll-down").classList.remove("scroll-down--static")
+          }
+        },
+        onLeave: () => {
+          document.querySelector(".our-projects .scroll-down").classList.add("scroll-down--static")
+        },
+        onLeaveBack: () => {
+          document.querySelector(".our-projects .scroll-down").classList.add("scroll-down--static")
+        },
+      }
+    })
+
     if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
       gsap.to(".our-projects .scroll-down", {
         scrollTrigger: {

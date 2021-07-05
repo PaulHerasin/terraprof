@@ -1,5 +1,30 @@
 export const Library = (timeDelay) => {
   if (document.querySelector(".library")) {
+
+    gsap.to(".library .video__play", {
+      scrollTrigger: {
+        trigger: ".library__wrap",
+        start: "top bottom",
+        end: "bottom top",
+        onEnter: () => {
+          if (document.querySelector(".library .video__play--static")) {
+            document.querySelector(".library .video__play").classList.remove("video__play--static")
+          }
+        },
+        onEnterBack: () => {
+          if (document.querySelector(".library .video__play--static")) {
+            document.querySelector(".library .video__play").classList.remove("video__play--static")
+          }
+        },
+        onLeave: () => {
+          document.querySelector(".library .video__play").classList.add("video__play--static")
+        },
+        onLeaveBack: () => {
+          document.querySelector(".library .video__play").classList.add("video__play--static")
+        },
+      }
+    })
+
     if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
 
       gsap.fromTo(".library .library__content .oh", {
