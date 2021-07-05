@@ -6,22 +6,37 @@
 		position: relative;
 		overflow: hidden;
 		cursor: pointer;
+		z-index: 2;
 
 		@media screen and (max-width: $large_tablet) {
 			padding: 10rem 0;
 		}
+
+		&:hover {
+			background: #000000;
+
+			.connection__bg {
+				transform: translate(0, 20px) scale(1.3);
+				opacity: 0.5;
+			}
+
+			.connection__bg-white {
+				top: 100%;
+			}
+
+			.connection__subtitle,
+			.connection__title {
+				color: #ffffff;
+			}
+		}
 	}
 
-	&__line {
-		width: 21%;
-		height: 30rem;
-		background-image: url('~img/svg/connection-line.svg');
-		background-size: cover;
-		background-repeat: no-repeat;
-		position: absolute;
-		right: 2%;
-		top: 50%;
-		transform: translateY(-50%);
+	&__bg-white,
+	&__bg,
+	&__subtitle,
+	&__title,
+	&__wrap {
+		transition: all 0.4s ease-in-out;
 	}
 
 	&__bg-white {
@@ -43,6 +58,19 @@
 		height: 100%;
 		object-fit: cover;
 		z-index: -2;
+		transform: scale(1.3);
+	}
+
+	&__line {
+		width: 21%;
+		height: 30rem;
+		background-image: url('~img/svg/connection-line.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: absolute;
+		right: 2%;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 
 	&__subtitle {

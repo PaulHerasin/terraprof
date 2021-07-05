@@ -5,8 +5,8 @@
 	color: #323841;
 	letter-spacing: 0.02em;
 	padding-bottom: 10rem;
-	position: relative;
 	background-color: rgba(#f6f6f6, 0.8);
+	z-index: 2;
 
 	@media screen and (max-width: $large_tablet) {
 		padding-bottom: 6rem;
