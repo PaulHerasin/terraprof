@@ -105,6 +105,14 @@
 
 		&-bottom {
 			position: relative;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			margin-bottom: -4rem;
+
+			@media screen and (max-width:$large_tablet) {
+				margin-bottom: 0rem;
+			}
 
 			.line {
 				height: 58rem;
@@ -113,6 +121,14 @@
 				left: 50%;
 				width: 41%;
 				transform: translateX(-50%);
+			}
+
+			.services__box {
+				width: calc(50% - 4rem);
+
+				@media screen and (max-width:$large_tablet) {
+					width: 100%;
+				}
 			}
 		}
 
@@ -157,7 +173,7 @@
 					opacity: 0;
 				}
 
-				> div {
+				>div {
 					transform: scale(1.08);
 				}
 			}
@@ -216,16 +232,14 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background: linear-gradient(
-				180deg,
-				rgba(39, 36, 37, 0) 0%,
-				rgba(39, 36, 37, 0.4) 100%
-			);
+			background: linear-gradient(180deg,
+					rgba(39, 36, 37, 0) 0%,
+					rgba(39, 36, 37, 0.4) 100%);
 			z-index: 2;
 			transition: opacity 0.5s;
 		}
 
-		> div {
+		>div {
 			position: relative;
 			padding-bottom: 133.82%;
 			transition: 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) transform;
@@ -247,7 +261,7 @@
 		&--pb67 {
 			max-width: 71rem;
 
-			> div {
+			>div {
 				padding-bottom: 67.6%;
 
 				@media screen and (max-width: $large_tablet) {
@@ -259,7 +273,7 @@
 		&--pb75 {
 			max-width: 40rem;
 
-			> div {
+			>div {
 				padding-bottom: 75%;
 
 				@media screen and (max-width: $large_tablet) {
@@ -269,7 +283,7 @@
 		}
 
 		&--pb101 {
-			> div {
+			>div {
 				padding-bottom: 101.33%;
 
 				@media screen and (max-width: $large_tablet) {
@@ -279,7 +293,7 @@
 		}
 
 		&--pb103 {
-			> div {
+			>div {
 				padding-bottom: 103.46%;
 
 				@media screen and (max-width: $large_tablet) {
@@ -289,7 +303,7 @@
 		}
 
 		&--pb200 {
-			> div {
+			>div {
 				padding-bottom: 200.26%;
 
 				@media screen and (max-width: $large_tablet) {
