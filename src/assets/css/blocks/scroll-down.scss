@@ -12,16 +12,25 @@
 		}
 	}
 
-	&__text {
-		writing-mode: vertical-rl;
-		margin-bottom: 1rem;
-		letter-spacing: 0.02em;
-		transition: all 0.5s;
+	span {
+		background-image: url('~img/svg/anhors-arrow.svg');
+		background-repeat: no-repeat;
+		height: 12px;
+		width: 18px;
+		display: block;
 	}
+
+	// &__text {
+	// 	writing-mode: vertical-rl;
+	// 	margin-bottom: 1rem;
+	// 	letter-spacing: 0.02em;
+	// 	transition: all 0.5s;
+	// }
 
 	&__scrolldown {
 		width: 2px;
 		height: 12rem;
+		margin: 0px auto -8px;
 	}
 
 	&__line {
@@ -29,7 +38,7 @@
 		height: 100%;
 		display: block;
 		background: linear-gradient(to bottom,
-				rgba(red, 0.3) 50%,
+				rgba(#D74346, 1) 50%,
 				rgba(255, 255, 255, 0) 50%);
 		background-position: 0 0rem;
 		background-size: 100% 200%;

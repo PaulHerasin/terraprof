@@ -16,6 +16,10 @@
 
     &__title {
         margin-bottom: 2rem;
+
+        .simple-title {
+            text-transform: initial;
+        }
     }
 
     &__wrap {

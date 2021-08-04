@@ -1,5 +1,6 @@
 .connection {
 	position: relative;
+	text-align: center;
 
 	&__wrap {
 		padding: 18rem 0;
@@ -24,8 +25,7 @@
 				top: 100%;
 			}
 
-			.connection__subtitle,
-			.connection__title {
+			.connection__subtitle {
 				color: #ffffff;
 			}
 		}
@@ -91,10 +91,11 @@
 	&__title {
 		text-align: center;
 
-		.simple-title {
+		&.simple-title {
 			font-weight: 300;
 			transition: color 0.5s;
 			color: $danger-light;
+			text-transform: initial;
 
 			@media screen and (max-width: $large_tablet) {
 				font-size: 3rem;
@@ -115,22 +116,22 @@
 				background-image: url('~img/svg/header-arrow.svg');
 				background-repeat: no-repeat;
 				background-size: contain;
-				opacity: 0;
-				visibility: hidden;
-				transition: opacity 0.5s, visibility 0.5s;
+				// opacity: 0;
+				// visibility: hidden;
+				// transition: opacity 0.5s, visibility 0.5s;
 				pointer-events: none;
 
 				@media screen and (max-width: $large_tablet) {
 					width: 2rem;
 					height: 2rem;
 					right: calc(100% + 1.5rem);
-					opacity: 1;
-					visibility: visible;
+					// opacity: 1;
+					// visibility: visible;
 				}
 			}
 
 			&:hover {
-				color: $danger-light;
+				// color: $danger-light;
 
 				&::after {
 					opacity: 1;
