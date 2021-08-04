@@ -3,7 +3,6 @@
     padding-bottom: 25.5rem;
 
     .wrap {
-        padding-right: 0;
         max-width: 100%;
 
         @media screen and (max-width:$large_tablet) {
@@ -66,7 +65,7 @@
 
         &-title {
             h3 {
-                font-size: 4rem;
+                font-size: 3.5rem;
                 letter-spacing: -0.04em;
                 font-family: $secondary-f;
                 cursor: pointer;
@@ -153,7 +152,7 @@
     &__right {
         width: calc(100% - 64rem - 3.5rem);
         margin-left: 3.5rem;
-        border-radius: calc(#{$br} * 4) 0 0 calc(#{$br} * 4);
+        border-radius: calc(#{$br} * 4);
         overflow: hidden;
 
         @media screen and (max-width:$large_tablet) {
