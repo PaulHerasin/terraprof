@@ -119,6 +119,7 @@
 		position: relative;
 		display: flex;
 		align-items: flex-start;
+		padding: 0 3rem;
 
 		@media screen and (max-width: $large_tablet) {
 			// flex-direction: column;
@@ -144,7 +145,7 @@
 
 			&--left {
 				max-width: 71.5rem;
-				margin-left: -15rem;
+				// margin-left: -15rem;
 				padding-top: 6rem;
 
 				@media screen and (max-width: $large_tablet) {
@@ -183,7 +184,7 @@
 
 			&--right {
 				max-width: 36.6rem;
-				margin-right: -4rem;
+				// margin-right: -4rem;
 				margin-top: auto;
 
 				@media screen and (max-width: $large_tablet) {
