@@ -13,3 +13,16 @@ for (let i = 0; i < videos.length; i++) {
         this.querySelector('iframe').src = "";
     });
 }
+
+////////////////
+let videosImg = document.querySelectorAll('.video-img');
+for (let i = 0; i < videosImg.length; i++) {
+    videosImg[i].addEventListener('mouseover', function () {
+        let iframeSrc = this.querySelector('iframe').getAttribute('data-src');
+        this.querySelector('iframe').src = iframeSrc;
+    });
+
+    videosImg[i].addEventListener('mouseleave', function () {
+        this.querySelector('iframe').src = "";
+    });
+}
