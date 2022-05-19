@@ -28,6 +28,23 @@ setTimeout(function () {
   });
 }, 1000);
 
+if (document.querySelector('html').clientWidth > window.LARGE_TABLET) {
+  setTimeout(function () {
+    gsap.to(header, {
+      scrollTrigger: {
+        trigger: "#scrollbar",
+        start: "1 top",
+        onEnter: () => {
+          headerFix()
+        },
+        onLeaveBack: () => {
+          headerStatic()
+        }
+      },
+    })
+  }, 1000);
+}
+
 
 function headerFix() {
   header.classList.add('header--fixed');

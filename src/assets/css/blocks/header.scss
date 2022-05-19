@@ -33,6 +33,9 @@
 		animation-fill-mode: forwards !important;
 		z-index: 98;
 		pointer-events: none;
+		background: #F6F6F6;
+		box-shadow: 0px 4px 15px rgba(84, 78, 80, 0.2);
+		padding: 2.2rem 0;
 
 		@media screen and (max-width: $large_tablet) {
 			background-color: #fff;
@@ -40,13 +43,45 @@
 			box-shadow: 0px 1px 36px 13px rgba(21, 21, 21, 0.03);
 		}
 
-		.header__logo {
-			display: none;
+		.header {
+			&__wrap {
+				align-items: center;
+			}
 
-			@media screen and (max-width: $large_tablet) {
-				display: block;
+			&__right {
+				display: flex;
+				align-items: center;
+
+			}
+
+			&__nav {
+				margin-bottom: 0;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+
+				&-list {
+					flex-direction: row;
+				}
+
+				&-item {
+					margin-bottom: 0;
+					margin-right: 5rem;
+
+					&:last-child {
+						margin-right: 0px;
+					}
+				}
 			}
 		}
+
+		// .header__logo {
+		// 	display: none;
+
+		// 	@media screen and (max-width: $large_tablet) {
+		// 		display: block;
+		// 	}
+		// }
 	}
 
 	&--height0 {

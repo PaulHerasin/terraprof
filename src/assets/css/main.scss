@@ -230,7 +230,7 @@ h4 {
 		transform: translateX(-50%);
 		width: 2px;
 		height: 8.4rem;
-		// background-color: $danger-light;
+		background-color: $danger-light;
 
 		@media screen and (max-width: $large_tablet) {
 			height: 4rem;
@@ -254,5 +254,24 @@ h4 {
 
 	@media screen and (max-width: 1200px) {
 		display: none !important;
+	}
+}
+
+.video-wrap {
+	&--hide {
+		.video {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	img {
+		z-index: 4;
+		transition: all .5s;
+
+		&.hide {
+			opacity: 0;
+			visibility: hidden;
+		}
 	}
 }
