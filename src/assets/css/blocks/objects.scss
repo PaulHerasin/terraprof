@@ -34,6 +34,12 @@
 			opacity: 0;
 			transition: opacity 0.5s;
 		}
+
+		&--video {
+			&::before {
+				display: none;
+			}
+		}
 	}
 
 	// &__filter {

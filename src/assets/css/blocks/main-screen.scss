@@ -9,6 +9,7 @@
 
 	.line {
 		background-image: url('~img/svg/line1.svg');
+		// background-image: url('~img/svg/decor-line.svg');
 		width: 24.7%;
 	}
 
@@ -83,6 +84,7 @@
 		max-width: calc(119rem + 30px);
 		margin: 0 auto 4rem;
 		padding: 0 15px;
+		display: block;
 
 		@media screen and (max-width: $large_tablet) {
 			padding: 0;
@@ -95,7 +97,7 @@
 			overflow: hidden;
 			margin: 0 auto;
 
-			>div {
+			>div:not(.video) {
 				position: relative;
 				padding-bottom: 58.8%;
 
@@ -103,7 +105,8 @@
 					padding-bottom: 50%;
 				}
 
-				img {
+				img,
+				video {
 					position: absolute;
 					top: 0px;
 					left: 0px;

@@ -99,11 +99,12 @@
 		position: relative;
 		z-index: 6;
 
-		>div {
+		>div:not(.video) {
 			position: relative;
 			padding-bottom: 65.92%;
 
-			img {
+			img,
+			video {
 				position: absolute;
 				top: 0px;
 				left: 0px;

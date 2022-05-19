@@ -2,8 +2,27 @@
 	position: relative;
 	text-align: center;
 
+	// &__line {
+	// 	height: 22.5rem;
+	// 	width: 19.3%;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	right: 0;
+	// 	opacity: 80%;
+	// 	z-index: 100;
+
+	// 	img {
+	// 		position: absolute;
+	// 		left: 0;
+	// 		top: 0;
+	// 		width: 100%;
+	// 		height: 100%;
+	// 		object-fit: cover;
+	// 	}
+	// }
+
 	&__wrap {
-		padding: 18rem 0;
+		padding: 19rem 0;
 		position: relative;
 		overflow: hidden;
 		cursor: pointer;
@@ -62,15 +81,17 @@
 	}
 
 	&__line {
-		width: 21%;
-		height: 30rem;
-		background-image: url('~img/svg/connection-line.svg');
+		width: 34%;
+		height: 36rem;
+		// background-image: url('~img/svg/connection-line.svg');
+		background-image: url('~img/png/decor-horiz.png');
 		background-size: cover;
 		background-repeat: no-repeat;
 		position: absolute;
-		right: 2%;
-		top: 50%;
-		transform: translateY(-50%);
+		right: 0;
+		top: 0;
+		z-index: 10;
+		// transform: translateY(-50%);
 	}
 
 	&__subtitle {
