@@ -1,19 +1,19 @@
 .history {
     padding: 12rem 0;
-
+    background: linear-gradient(180deg, #F6F6F6 41.61%, #F6F6F6 41.61%, rgba(246, 246, 246, 0.97) 100%);
     overflow-x: hidden;
     position: relative;
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 88.5%;
-        height: 100%;
-        background: linear-gradient(180deg, #F6F6F6 41.61%, #F6F6F6 41.61%, rgba(246, 246, 246, 0.97) 100%);
-        // opacity: 0.4;
-    }
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 88.5%;
+    //     height: 100%;
+    //     background: linear-gradient(180deg, #F6F6F6 41.61%, #F6F6F6 41.61%, rgba(246, 246, 246, 0.97) 100%);
+    //     // opacity: 0.4;
+    // }
 
     @media screen and (max-width:$large_tablet) {
         padding: 6rem 0;
@@ -25,7 +25,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        opacity: 80%;
+        opacity: 0.4;
 
         &--center {
             left: auto;
