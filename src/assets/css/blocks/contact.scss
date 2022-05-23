@@ -78,9 +78,16 @@
 		filter: drop-shadow(4px 4px 40px rgba(74, 80, 89, 0.1));
 
 		@media screen and (max-width: $large_tablet) {
-			margin-top: -4rem;
+			// margin-top: -4rem;
+			top: initial;
+			right: initial;
 			padding: 5rem;
 			margin-bottom: 4rem;
+			position: relative;
+			max-width: calc(480px - 30px);
+			width: calc(100% - 30px);
+			margin: 0 auto 3rem;
+			// padding: ;
 		}
 
 		&-box {
@@ -255,6 +262,11 @@
 				color: #272425;
 				font-size: 3.2rem;
 				font-weight: 500;
+
+				@media screen and (max-width: $large_tablet) {
+					font-size: 2.4rem;
+					margin-bottom: 3rem;
+				}
 			}
 		}
 
