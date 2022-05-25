@@ -1,6 +1,6 @@
-$(".video").fancybox({
-    type: "iframe",
-});
+// $(".video").fancybox({
+//     type: "iframe",
+// });
 
 let videos = document.querySelectorAll('.video-iframe');
 for (let i = 0; i < videos.length; i++) {
@@ -26,17 +26,21 @@ for (let i = 0; i < videos.length; i++) {
 //         this.querySelector('iframe').src = "";
 //     });
 // }
+if (document.querySelector('.video-wrap')) {
+    if (document.querySelector('html').clientWidth > window.LARGE_TABLET) {
+        var video = $('.objects__video');
+        $('.video-wrap').mouseover(function () {
+            $(this).addClass('video-wrap--hide');
+            $(this).find('img').addClass('hide');
+            $(this).find(video).get(0).play();
 
-var video = $('.objects__video');
-$('.video-wrap').mouseover(function () {
-    $(this).addClass('video-wrap--hide');
-    $(this).find('img').addClass('hide');
-    $(this).find(video).get(0).play();
+        });
+        $('.video-wrap').mouseout(function () {
+            $(this).removeClass('video-wrap--hide');
+            $(this).find('img').removeClass('hide');
+            $(this).find(video).get(0).pause();
+            $(this).find(video).get(0).currentTime = 0;
+        });
+    }
+}
 
-});
-$('.video-wrap').mouseout(function () {
-    $(this).removeClass('video-wrap--hide');
-    $(this).find('img').removeClass('hide');
-    $(this).find(video).get(0).pause();
-    $(this).find(video).get(0).currentTime = 0;
-});
