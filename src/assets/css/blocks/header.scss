@@ -39,11 +39,15 @@
 
 		@media screen and (max-width: $large_tablet) {
 			background-color: #fff;
-			padding-bottom: 1rem;
+			padding: 1rem 0;
 			box-shadow: 0px 1px 36px 13px rgba(21, 21, 21, 0.03);
 		}
 
 		.header {
+			&__logo {
+				padding-top: 0;
+			}
+
 			&__wrap {
 				align-items: center;
 			}
@@ -133,6 +137,8 @@
 	}
 
 	&__logo {
+		max-width: 25.5rem;
+		width: 100%;
 		padding-top: 0.5rem;
 		pointer-events: auto;
 

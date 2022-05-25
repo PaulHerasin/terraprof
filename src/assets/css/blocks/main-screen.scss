@@ -11,6 +11,12 @@
 		background-image: url('~img/svg/line1.svg');
 		// background-image: url('~img/svg/decor-line.svg');
 		width: 24.7%;
+
+		&--mobile {
+			@media screen and (max-width:$large_tablet) {
+				display: none;
+			}
+		}
 	}
 
 	&::before {
@@ -96,6 +102,7 @@
 			border-radius: calc(#{$br} * 4);
 			overflow: hidden;
 			margin: 0 auto;
+			position: relative;
 
 			>div:not(.video) {
 				position: relative;
